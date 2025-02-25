@@ -1,14 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-// int x;
-// x=2;
-// Console.WriteLine("Hello, World!");
-// Console.WriteLine(x*2);
-
-// string a = "apple";
-// string b = "banana";
-// Console.WriteLine(a == b);  // Output: False
-// Console.WriteLine(a.CompareTo(b));
-
 Console.WriteLine("n=");
 string n = Console.ReadLine();
 Console.WriteLine("n=" + n);
@@ -28,4 +18,6 @@ for (int i = 1; i < x; i++)
     }
     else Console.Write(i+", ");
 }
+
+
 
