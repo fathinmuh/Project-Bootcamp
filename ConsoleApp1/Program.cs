@@ -1,56 +1,91 @@
-﻿//matriks
-int[,] matriks = new int[2, 2];
-int[,] m = new int[2, 2];
+﻿class Tiket
+{
+	private int _price;
+    private int nomertiket=123;
+    private int nomertiket2=666;
+	public Tiket(int price)
+	{
+		if (!(price < 100))
+		{
+			Environment.Exit(0);
+		}
+	}
 
-Console.WriteLine("Masukkan elemen matriks 2x2:");
-for (int i = 0; i < 2; i++) {
-    string[] baris = Console.ReadLine().Split();
-    for (int j = 0; j < 2; j++) {
-        matriks[i, j] = int.Parse(baris[j]);
-    }
+	public int CheckVariable(string validasi)
+	{
+        Console.Write("nomer tiket: ");
+		if(validasi.Equals("fathin"))
+		{
+			return nomertiket;
+		}
+        else if(validasi.Equals("muhammad"))
+		{
+			return nomertiket2;
+		}
+		return 0;
+	}
+	//fuction overide
+	public virtual void Greating()
+	{
+		Console.WriteLine("Total =");
+	}
+	
+	//fucn untuk mengubah nilai dengan valiadsi
+	protected void SetPrice(int price)
+	{
+		if (!(price < 0))
+		{
+			this._price = price;
+		}
+	}
 }
 
-Console.WriteLine("Transpos");
-for (int i = 0; i < 2; i++) {
-    for (int j = 0; j < 2; j++) {
-        Console.Write(matriks[j, i] + " ");
-    }
-    Console.WriteLine();
+class Order:Tiket
+{
+    
+    private int harga1=25000;
+    private int harga2=20000;
+	public string skill;
+	public Order(int _price, string skill):base(_price)
+	{
+		this.skill = skill;
+	}
+	//modifier public acces protected acces private
+	public void SetPricePublic(int price)
+	{
+		SetPrice(price);
+	}
+	
+	//Overide
+	public override void Greating()
+	{
+		base.Greating();
+		Console.WriteLine("Selamat datang lagi"); 
+	}
+	
 }
 
-Console.WriteLine("determinan matriks:");
-int det = matriks [0,0]*matriks[1,1]-matriks[1,0]*matriks[0,1];
-Console.Write(det);
+class Program 
+{
+	static void Main()
+	{
+        Console.Write("OTP (2 digit): ");
+        int number = Convert.ToInt32(Console.ReadLine());
+        Console.Write("nama: ");
+        string nama = Console.ReadLine();
 
-// Console.WriteLine("Invers");
-// for (int i = 0; i < 2; i++) {
-//     for (int j = 0; j < 2; j++) {
-//         m[,]=matriks[0,0];
-//         matriks[0,0]=matriks[1,1];
-//         matriks[1,0]=-matriks[1,0];
-//         matriks[0,1]=-matriks[0,1];
-//         matriks[1,1]=m[,]
-//         Console.Write(matriks[j, i] + " ");
-//     }
-//     Console.WriteLine();
-// }
+		Tiket tiket = new Tiket(number);
+		
+		Order order= new Order(number, nama);
+		Console.WriteLine(order.CheckVariable(nama));
+		
+        Console.Write("Jumlah tiket: ");
+        int Jumlah = Convert.ToInt32(Console.ReadLine());
+		order.SetPricePublic(Jumlah);
+		
+		//ovveride
+		order.Greating();
+	}
+}
 
-// foobar
-// Console.WriteLine("n=");
-// int x = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("n=" + x);
-
-// for (int i = 1; i <= x; i++)
-// {
-//     if (((i % 3) == 0)&&((i % 5)==0 )){
-//     Console.Write("foobar, ");
-//     }
-//     else if ((i % 3) == 0){
-//     Console.Write("foo, ");
-//     }
-//     else if ((i % 5) == 0){
-//     Console.Write("bar, ");
-//     }
-//     else Console.Write(i+", ");
-// }
-
+﻿
