@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\bin\Debug\net8.0\day 4 interface.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\bin\Debug\net8.0\day 4 interface.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\bin\Debug\net8.0\day 4 interface.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\bin\Debug\net8.0\day 4 interface.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\bin\Debug\net8.0\day 4 interface.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\obj\Debug\net8.0\day 4 interface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\obj\Debug\net8.0\day 4 interface.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\obj\Debug\net8.0\day 4 interface.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\obj\Debug\net8.0\day 4 interface.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\obj\Debug\net8.0\day 4 interface.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\obj\Debug\net8.0\day 4 interface.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\obj\Debug\net8.0\refint\day 4 interface.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\obj\Debug\net8.0\day 4 interface.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\obj\Debug\net8.0\day 4 interface.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 interface\obj\Debug\net8.0\ref\day 4 interface.dll

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 4 struct", "Day 4 struct\Day 4 struct.csproj", "{05A165C7-BD35-45BF-84FB-B6B228E32676}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day 4 interface", "day 4 interface\day 4 interface.csproj", "{9E1B1593-E97C-4367-93B4-3C4388D0BD67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{05A165C7-BD35-45BF-84FB-B6B228E32676}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05A165C7-BD35-45BF-84FB-B6B228E32676}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05A165C7-BD35-45BF-84FB-B6B228E32676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E1B1593-E97C-4367-93B4-3C4388D0BD67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E1B1593-E97C-4367-93B4-3C4388D0BD67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E1B1593-E97C-4367-93B4-3C4388D0BD67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E1B1593-E97C-4367-93B4-3C4388D0BD67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
