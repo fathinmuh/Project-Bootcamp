@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\obj\Debug\net8.0\day 4 generics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\obj\Debug\net8.0\day 4 generics.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\obj\Debug\net8.0\day 4 generics.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\obj\Debug\net8.0\day 4 generics.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\obj\Debug\net8.0\day 4 generics.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\bin\Debug\net8.0\day 4 generics.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\bin\Debug\net8.0\day 4 generics.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\bin\Debug\net8.0\day 4 generics.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\bin\Debug\net8.0\day 4 generics.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\bin\Debug\net8.0\day 4 generics.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\obj\Debug\net8.0\day 4 generics.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\obj\Debug\net8.0\refint\day 4 generics.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\obj\Debug\net8.0\day 4 generics.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\obj\Debug\net8.0\day 4 generics.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\day 4 generics\obj\Debug\net8.0\ref\day 4 generics.dll
