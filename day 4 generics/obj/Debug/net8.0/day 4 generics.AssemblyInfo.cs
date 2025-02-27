@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("day 4 generics")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21c929c3a296a696a7886641f36914e4e432fc53")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33b83df9231ae9c9339f46299788227735c6c97b")]
 [assembly: System.Reflection.AssemblyProductAttribute("day 4 generics")]
 [assembly: System.Reflection.AssemblyTitleAttribute("day 4 generics")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
