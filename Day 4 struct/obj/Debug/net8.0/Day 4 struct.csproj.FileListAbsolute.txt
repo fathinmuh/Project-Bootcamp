@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\bin\Debug\net8.0\Day 4 struct.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\bin\Debug\net8.0\Day 4 struct.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\bin\Debug\net8.0\Day 4 struct.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\bin\Debug\net8.0\Day 4 struct.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\bin\Debug\net8.0\Day 4 struct.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\obj\Debug\net8.0\Day 4 struct.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\obj\Debug\net8.0\Day 4 struct.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\obj\Debug\net8.0\Day 4 struct.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\obj\Debug\net8.0\Day 4 struct.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\obj\Debug\net8.0\Day 4 struct.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\obj\Debug\net8.0\Day 4 struct.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\obj\Debug\net8.0\refint\Day 4 struct.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\obj\Debug\net8.0\Day 4 struct.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\obj\Debug\net8.0\Day 4 struct.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\Day 4 struct\obj\Debug\net8.0\ref\Day 4 struct.dll
