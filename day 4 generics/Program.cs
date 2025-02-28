@@ -1,30 +1,35 @@
-﻿﻿using System.Numerics;
-public interface ICalculator<T>
+﻿﻿public static class DebugHelper
 {
-    public T Add(T a, T b);
-    public T Minus(T a, T b);
-    public T Multi(T a, T b);
-    public T Devide(T a, T b);
-}
-public class Calculator<T> : ICalculator<T> where T : INumber<T>
-{
-    public T Add(T a, T b) => a + b;
-    public T Minus(T a, T b) => a - b;
-    public T Multi(T a, T b) => a * b;
-
-    public T Devide(T a, T b)
+    public static void Dump<T>(this T obj)
     {
-        if (b.Equals(default(T)))
-            throw new DivideByZeroException("Pembagian dengan nol tidak diperbolehkan!");
-        return a / b;
+        Console.WriteLine(obj);
     }
+}
+﻿public delegate string Subscribers(string text);
+public class Youtuber
+{
+	public Subscribers subscribers;
+	public string SentNotification() {
+		return subscribers("text");
+	}
+}
+public class Subscriber {
+	public string ShowNotification(string msg) {
+		return "Thank you" + msg;
+	}
+}
+public class Notification {
+	public string ShowNotif(string msg) {
+		return "Notif : " + msg;
+	}
 }
 class Program {
 	static void Main() {
-		ICalculator<int> calc = new Calculator<int>();
-        Console.WriteLine(calc.Add(5,8));
-
-        ICalculator<decimal> calcdecimal = new Calculator<decimal>();
-        Console.WriteLine(calcdecimal.Devide(5,8));
-	}	
+		Youtuber youtuber = new();
+		Subscriber sub = new();
+		Notification notif = new();
+		youtuber.subscribers += sub.ShowNotification;
+		youtuber.subscribers += notif.ShowNotif;
+		youtuber.SentNotification().Dump();
+	}
 }
