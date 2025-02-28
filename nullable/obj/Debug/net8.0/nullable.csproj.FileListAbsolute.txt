@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\bin\Debug\net8.0\nullable.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\bin\Debug\net8.0\nullable.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\bin\Debug\net8.0\nullable.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\bin\Debug\net8.0\nullable.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\bin\Debug\net8.0\nullable.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\obj\Debug\net8.0\nullable.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\obj\Debug\net8.0\nullable.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\obj\Debug\net8.0\nullable.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\obj\Debug\net8.0\nullable.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\obj\Debug\net8.0\nullable.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\obj\Debug\net8.0\nullable.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\obj\Debug\net8.0\refint\nullable.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\obj\Debug\net8.0\nullable.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\obj\Debug\net8.0\nullable.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\nullable\obj\Debug\net8.0\ref\nullable.dll

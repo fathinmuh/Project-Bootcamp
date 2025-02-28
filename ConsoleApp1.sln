@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "event", "event\event.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trycatch", "trycatch\trycatch.csproj", "{C2F98B30-4817-4592-A21C-621B324236A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nullable", "nullable\nullable.csproj", "{CDF86845-94C2-44E5-BCBB-2E1812D934FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +62,9 @@ Global
 		{C2F98B30-4817-4592-A21C-621B324236A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2F98B30-4817-4592-A21C-621B324236A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2F98B30-4817-4592-A21C-621B324236A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDF86845-94C2-44E5-BCBB-2E1812D934FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDF86845-94C2-44E5-BCBB-2E1812D934FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDF86845-94C2-44E5-BCBB-2E1812D934FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDF86845-94C2-44E5-BCBB-2E1812D934FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
