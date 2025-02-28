@@ -1,26 +1,34 @@
-﻿// Define a delegate that matches the event signature
-public delegate void PriceChangedHandler(decimal oldPrice, decimal newPrice);
-
-
-
-public class Broadcaster
+﻿public class Stock
 {
-    // Declare an event using the delegate
-    public event PriceChangedHandler PriceChanged;
-
-    // A method to trigger the event
-    public void ChangePrice(decimal newPrice)
+    private decimal price;
+    public virtual event EventHandler PriceChanged;
+    public decimal Price
     {
-        decimal oldPrice = 100m; // Example old price
-        PriceChanged?.Invoke(oldPrice, newPrice); // Fire the event
+        get => price;
+        set
+        {
+            if (price != value)
+            {
+                var oldPrice = price;
+                price = value;
+                OnPriceChanged(new EventArgs());
+            }
+        }
+    }
+
+    protected virtual void OnPriceChanged(EventArgs e)
+    {
+        PriceChanged?.Invoke(this, e);
     }
 }
 
-public class Subscriber
+public class SpecialStock : Stock
 {
-    public void OnPriceChanged(decimal oldPrice, decimal newPrice)
+    public override event EventHandler PriceChanged;
+    protected override void OnPriceChanged(EventArgs e)
     {
-        Console.WriteLine($"Price changed from {oldPrice} to {newPrice}");
+        Console.WriteLine("Price changed in SpecialStock!");
+        base.OnPriceChanged(e);
     }
 }
 
@@ -28,16 +36,8 @@ class Program
 {
     static void Main()
     {
-        Broadcaster broadcaster = new Broadcaster();
-        Subscriber subscriber = new Subscriber();
-        
-        // Subscribe to the event
-        broadcaster.PriceChanged += subscriber.OnPriceChanged;
-
-        // Trigger the event
-        broadcaster.ChangePrice(120m);
-
-        // Unsubscribe from the event
-        broadcaster.PriceChanged -= subscriber.OnPriceChanged;
+        SpecialStock stock = new SpecialStock();
+        stock.PriceChanged += (sender, e) => Console.WriteLine("Subscriber received price change notification.");
+        stock.Price = 150m;
     }
 }
