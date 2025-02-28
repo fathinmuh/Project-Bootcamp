@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\bin\Debug\net8.0\event.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\bin\Debug\net8.0\event.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\bin\Debug\net8.0\event.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\bin\Debug\net8.0\event.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\bin\Debug\net8.0\event.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\obj\Debug\net8.0\event.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\obj\Debug\net8.0\event.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\obj\Debug\net8.0\event.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\obj\Debug\net8.0\event.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\obj\Debug\net8.0\event.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\obj\Debug\net8.0\event.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\obj\Debug\net8.0\refint\event.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\obj\Debug\net8.0\event.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\obj\Debug\net8.0\event.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\event\obj\Debug\net8.0\ref\event.dll
