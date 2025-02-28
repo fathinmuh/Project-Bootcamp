@@ -1,29 +1,45 @@
-﻿
+﻿public class OperationResult<T>
+{
+    public bool Success { get; set; }
+    public T Value { get; set; }
+    public string ErrorMessage { get; set; }
 
-class Program{
-    static void Main()    {
-    bool TryDivide(int numerator, int denominator, out int result){
-        if (denominator == 0){
-            result = 0;
-            return false;  // Return false if division by zero
-        }
-
-        result = numerator / denominator;
-        return true;
+    public static OperationResult<T> SuccessResult(T value)
+    {
+        return new OperationResult<T> { Success = true, Value = value };
     }
 
+    public static OperationResult<T> FailureResult(string errorMessage)
+    {
+        return new OperationResult<T> { Success = false, ErrorMessage = errorMessage };
+    }
+}
 
+public class Operasi{
+public OperationResult<int> TryDivide(int numerator, int denominator)
+{
+    if (denominator == 0)
+    {
+        return OperationResult<int>.FailureResult("Division by zero");
+    }
 
-        int result;
-        bool success = TryDivide(10, 0, out result);
+    return OperationResult<int>.SuccessResult(numerator / denominator);
+}
+}
+class Program
+{
+    static void Main()
+    {
+        Operasi operasi = new ();
+        var result = operasi.TryDivide(10, 0);
 
-        if (success)
+        if (result.Success)
         {
-            Console.WriteLine($"Division result: {result}");
+            Console.WriteLine($"Division result: {result.Value}");
         }
         else
         {
-            Console.WriteLine("Division by zero occurred.");
+            Console.WriteLine($"Error: {result.ErrorMessage}");
         }
     }
 }
