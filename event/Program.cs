@@ -1,27 +1,26 @@
-﻿ using System;
+﻿// Define a delegate that matches the event signature
+public delegate void PriceChangedHandler(decimal oldPrice, decimal newPrice);
 
-public delegate void ButtonClickedEventHandler(object sender, EventArgs e);
 
 
-public class Button
+public class Broadcaster
 {
-    public event ButtonClickedEventHandler Clicked;
-    private void button1_Click(object sender, System.EventArgs e){}
+    // Declare an event using the delegate
+    public event PriceChangedHandler PriceChanged;
 
-    public void OnClicked()
+    // A method to trigger the event
+    public void ChangePrice(decimal newPrice)
     {
-        if (Clicked != null)
-        {
-            Clicked(this, EventArgs.Empty);
-        }
+        decimal oldPrice = 100m; // Example old price
+        PriceChanged?.Invoke(oldPrice, newPrice); // Fire the event
     }
 }
 
-public class Form
+public class Subscriber
 {
-    public void HandleButtonClick(object sender, EventArgs e)
+    public void OnPriceChanged(decimal oldPrice, decimal newPrice)
     {
-        Console.WriteLine("Button was clicked!");
+        Console.WriteLine($"Price changed from {oldPrice} to {newPrice}");
     }
 }
 
@@ -29,9 +28,16 @@ class Program
 {
     static void Main()
     {
-        Form form = new Form();
-        Button button = new Button();
-        button.Clicked += form.HandleButtonClick;
-        button.OnClicked();
+        Broadcaster broadcaster = new Broadcaster();
+        Subscriber subscriber = new Subscriber();
+        
+        // Subscribe to the event
+        broadcaster.PriceChanged += subscriber.OnPriceChanged;
+
+        // Trigger the event
+        broadcaster.ChangePrice(120m);
+
+        // Unsubscribe from the event
+        broadcaster.PriceChanged -= subscriber.OnPriceChanged;
     }
 }
