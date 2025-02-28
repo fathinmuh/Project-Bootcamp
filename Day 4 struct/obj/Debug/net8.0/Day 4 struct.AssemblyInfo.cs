@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Day 4 struct")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41e31e2381fcbfea7e09e892a976ee0327d55808")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b60aebd2b2e0b1ebb195fc13cb142785d0618aa9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Day 4 struct")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Day 4 struct")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day 4 interface", "day 4 in
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day 4 generics", "day 4 generics\day 4 generics.csproj", "{1FD21952-1BEB-4BFA-B24B-E6DF108FACC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "delegates", "delegates\delegates.csproj", "{DDFFA284-737B-4C08-8C2A-DF5FAD27DA9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{1FD21952-1BEB-4BFA-B24B-E6DF108FACC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FD21952-1BEB-4BFA-B24B-E6DF108FACC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FD21952-1BEB-4BFA-B24B-E6DF108FACC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDFFA284-737B-4C08-8C2A-DF5FAD27DA9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDFFA284-737B-4C08-8C2A-DF5FAD27DA9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDFFA284-737B-4C08-8C2A-DF5FAD27DA9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDFFA284-737B-4C08-8C2A-DF5FAD27DA9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

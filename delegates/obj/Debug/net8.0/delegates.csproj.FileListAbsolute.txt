@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\obj\Debug\net8.0\delegates.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\obj\Debug\net8.0\delegates.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\obj\Debug\net8.0\delegates.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\obj\Debug\net8.0\delegates.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\obj\Debug\net8.0\delegates.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\bin\Debug\net8.0\delegates.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\bin\Debug\net8.0\delegates.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\bin\Debug\net8.0\delegates.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\bin\Debug\net8.0\delegates.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\bin\Debug\net8.0\delegates.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\obj\Debug\net8.0\delegates.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\obj\Debug\net8.0\refint\delegates.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\obj\Debug\net8.0\delegates.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\obj\Debug\net8.0\delegates.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\delegates\obj\Debug\net8.0\ref\delegates.dll
