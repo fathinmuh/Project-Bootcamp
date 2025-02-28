@@ -7,12 +7,13 @@ class Program
     {
             void WriteProgressToConsole(int percentComplete)
             {
-                Console.WriteLine(percentComplete);
+                Console.WriteLine("delegate 1 " + percentComplete);
             }
 
             void WriteProgressToFile(int percentComplete)
             {
-                System.IO.File.WriteAllText("progress.txt", percentComplete.ToString());
+                // System.IO.File.WriteAllText("progress.txt", percentComplete.ToString());
+                Console.WriteLine("delegate 2 " + 2*percentComplete);
             }
 
             // Create a multicast delegate
