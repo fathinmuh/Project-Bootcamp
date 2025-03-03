@@ -3,6 +3,8 @@ using System.Security.Cryptography.X509Certificates;
 
 delegate void ProgressReporter(int percentComplete);
 
+
+
 public class Perintah{
     public void WriteProgressToConsole(int percentComplete)
     {
@@ -28,5 +30,14 @@ class Program
             reporter += perintah.WriteProgressToConsole2;
 
             reporter(10);
+
+            // Using Func
+            Func<int, int, int> add = (x, y) => x + y;
+            Console.WriteLine(add(2, 3));  // Outputs: 5
+             // Using Action
+            Action<string> printMessage = message => Console.WriteLine(message);
+            printMessage("Hello, world!");  // Outputs: Hello, world!
+
+
     }
 }
