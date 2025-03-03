@@ -1,40 +1,30 @@
-﻿
-// public delegate foobarjazz();
-public class DeretBilangan
+﻿// See https://aka.ms/new-console-template for more information
+string n = Console.ReadLine();
+int x= int.Parse(n);
+
+
+for (int i = 1; i < x; i++)
 {
-    // public void event Foo;
-    public void PrintNumbers(int n)
-    {
-        for (int i = 1; i <= n; i++)
-        {
-            Console.Write(i + " ");
-        }
+    if (((i % 7) == 0)&&((i % 5) == 0)&&((i % 3)==0 )){
+    Console.Write("foobarjazz, ");
     }
-}
-
-public class Kelipatan{
-    public void Kelipatan7()
-    {
-        Console.Write("Jazz ");
+    if (((i % 7) == 0)&&((i % 5)==0 )){
+    Console.Write("barjazz, ");
     }
-
-    public void Kelipatan5()
-    {
-        Console.Write("Bar ");
+    if (((i % 7) == 0)&&((i % 3)==0 )){
+    Console.Write("foojazz, ");
     }
-
-    public void Kelipatan3()
-    {
-        Console.Write("Jaz ");
+    if (((i % 3) == 0)&&((i % 5)==0 )){
+    Console.Write("foobar, ");
     }
+    else if ((i % 3) == 0){
+    Console.Write("foo, ");
+    }
+    else if ((i % 5) == 0){
+    Console.Write("bar, ");
+    }
+    else Console.Write(i+", ");
 }
 
 
-class Program{
-    static void Main(){
-        DeretBilangan deretBilangan = new();
-        string x = Console.ReadLine();
-        int y = int.Parse(x);
-        deretBilangan.PrintNumbers(y);
-    }
-}
+
