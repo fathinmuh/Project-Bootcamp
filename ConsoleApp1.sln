@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nullable", "nullable\nullab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "enumeration dan iterator", "enumeration dan iterator\enumeration dan iterator.csproj", "{FA9410F7-00CA-42FB-9089-BF917F6F710A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "operator overloading", "operator overloading\operator overloading.csproj", "{F4100817-1323-4AC8-897A-EAED986195E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,9 @@ Global
 		{FA9410F7-00CA-42FB-9089-BF917F6F710A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA9410F7-00CA-42FB-9089-BF917F6F710A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA9410F7-00CA-42FB-9089-BF917F6F710A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4100817-1323-4AC8-897A-EAED986195E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4100817-1323-4AC8-897A-EAED986195E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4100817-1323-4AC8-897A-EAED986195E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4100817-1323-4AC8-897A-EAED986195E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

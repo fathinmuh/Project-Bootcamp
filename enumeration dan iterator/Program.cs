@@ -51,5 +51,5 @@ IEnumerable<int> EvenNumbersOnly(IEnumerable<int> sequence)
 
 foreach (int fib2 in EvenNumbersOnly(Fibs(8)))
 {
-    Console.Write(fib2 + " ");  // Output: 0, 2, 8
+    Console.Write(fib2 +  " ");  // Output: 0, 2, 8
 }
