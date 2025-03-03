@@ -1,43 +1,42 @@
-﻿public class Stock
-{
-    private decimal price;
-    public virtual event EventHandler PriceChanged;
-    public decimal Price
-    {
-        get => price;
-        set
-        {
-            if (price != value)
-            {
-                var oldPrice = price;
-                price = value;
-                OnPriceChanged(new EventArgs());
-            }
-        }
-    }
+﻿// Define a delegate
+public delegate void AlarmHandler();
 
-    protected virtual void OnPriceChanged(EventArgs e)
+// Define an event based on the delegate
+public class Broadcaster{
+    public event AlarmHandler FireAlarm;
+
+    // Method to trigger the alarm
+    public void DetectFire()
     {
-        PriceChanged?.Invoke(this, e);
+        Console.WriteLine("Fire detected!");
+        FireAlarm?.Invoke(); // Notify all subscribers
     }
 }
 
-public class SpecialStock : Stock
-{
-    public override event EventHandler PriceChanged;
-    protected override void OnPriceChanged(EventArgs e)
+
+public class Subs{
+// Methods that respond to the event
+    public void CallFireDepartment()
     {
-        Console.WriteLine("Price changed in SpecialStock!");
-        base.OnPriceChanged(e);
+        Console.WriteLine("Calling the fire department...");
+    }
+
+    public void OpenEmergencyExits()
+    {
+        Console.WriteLine("Opening emergency exits...");
     }
 }
 
-class Program
-{
-    static void Main()
-    {
-        SpecialStock stock = new SpecialStock();
-        stock.PriceChanged += (sender, e) => Console.WriteLine("Subscriber received price change notification.");
-        stock.Price = 150m;
+class Program{
+    static void Main(){
+        // Subscribing to the event
+        Broadcaster broadcaster = new Broadcaster();
+        Subs subs = new Subs();
+
+        broadcaster.FireAlarm += subs.CallFireDepartment;
+        broadcaster.FireAlarm += subs.OpenEmergencyExits;
+
+        // Trigger the fire alarm
+        broadcaster.DetectFire();
     }
 }
