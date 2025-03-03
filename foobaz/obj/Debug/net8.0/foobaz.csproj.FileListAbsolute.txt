@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\bin\Debug\net8.0\foobaz.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\bin\Debug\net8.0\foobaz.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\bin\Debug\net8.0\foobaz.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\bin\Debug\net8.0\foobaz.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\bin\Debug\net8.0\foobaz.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\refint\foobaz.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\ref\foobaz.dll
