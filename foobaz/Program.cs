@@ -1,20 +1,23 @@
-﻿
-public delegate void Foobarjazz(int i);
-public class DeretBilangan
-{
-    public event Foobarjazz Fbj;
-    public void PrintNumbers(int n)    {
-        for (int i = 1; i <= n; i++)
-        {
-            if (i % 3 == 0 || i % 5 == 0 || i % 7 == 0){
-                Kelipatan357(i);
-            } else
-            Console.Write(i + " ");
-        }
-    }
-
+﻿public delegate void FooBarJazz(int i);
+public class PrintNumber{
+    public event FooBarJazz Fbj;
     public void Kelipatan357(int i){ //trigger
         Fbj?.Invoke(i);
+    }
+
+    public IEnumerable<int> Fibs(int lengthNumber)
+    {
+        int x = 0, y = 1;
+        for (int i = 0; i < lengthNumber; i++)
+        {
+            int newNumber = x + y;
+            x = newNumber;
+
+            if (x % 3 == 0 || x % 5 == 0 || x % 7 == 0){
+                Kelipatan357(x);
+            }
+            else yield return x;
+        }
     }
 }
 
@@ -35,16 +38,25 @@ public class Kelipatan{
 
 class Program{
     static void Main(){
-        DeretBilangan deretBilangan = new();
+        PrintNumber printNumber = new();
         Kelipatan kelipatan = new ();
-        string x = Console.ReadLine();
-        int y = int.Parse(x);
 
-        deretBilangan.Fbj += kelipatan.Tiga;
-        deretBilangan.Fbj += kelipatan.Lima;
-        deretBilangan.Fbj += kelipatan.Tujuh;
-        deretBilangan.Fbj += kelipatan.Spasi;
+        string n = Console.ReadLine();
+        int x= int.Parse(n);
 
-        deretBilangan.PrintNumbers(y);
+        printNumber.Fbj += kelipatan.Tiga;
+        printNumber.Fbj += kelipatan.Lima;
+        printNumber.Fbj += kelipatan.Tujuh;
+        printNumber.Fbj += kelipatan.Spasi;
+
+        foreach (int fib in printNumber.Fibs(x)){
+            Console.Write(fib + " ");
+        }
     }
 }
+
+
+
+
+
+
