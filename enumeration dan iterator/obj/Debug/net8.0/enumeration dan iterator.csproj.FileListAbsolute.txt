@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\bin\Debug\net8.0\enumeration dan iterator.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\bin\Debug\net8.0\enumeration dan iterator.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\bin\Debug\net8.0\enumeration dan iterator.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\bin\Debug\net8.0\enumeration dan iterator.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\bin\Debug\net8.0\enumeration dan iterator.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\obj\Debug\net8.0\enumeration dan iterator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\obj\Debug\net8.0\enumeration dan iterator.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\obj\Debug\net8.0\enumeration dan iterator.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\obj\Debug\net8.0\enumeration dan iterator.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\obj\Debug\net8.0\enumeration dan iterator.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\obj\Debug\net8.0\enumeration dan iterator.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\obj\Debug\net8.0\refint\enumeration dan iterator.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\obj\Debug\net8.0\enumeration dan iterator.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\obj\Debug\net8.0\enumeration dan iterator.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\enumeration dan iterator\obj\Debug\net8.0\ref\enumeration dan iterator.dll
