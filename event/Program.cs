@@ -1,42 +1,23 @@
-﻿// Define a delegate
-public delegate void AlarmHandler();
+﻿public class Stock
+{
+    // Declare a sealed event
+    public sealed event EventHandler PriceChanged;
 
-// Define an event based on the delegate
-public class Broadcaster{
-    public event AlarmHandler FireAlarm;
-
-    // Method to trigger the alarm
-    public void DetectFire()
+    // Method to trigger the event
+    public void ChangePrice(decimal newPrice)
     {
-        Console.WriteLine("Fire detected!");
-        FireAlarm?.Invoke(); // Notify all subscribers
+        PriceChanged?.Invoke(this, EventArgs.Empty);
     }
 }
 
-
-public class Subs{
-// Methods that respond to the event
-    public void CallFireDepartment()
+class Program
+{
+    static void Main()
     {
-        Console.WriteLine("Calling the fire department...");
-    }
-
-    public void OpenEmergencyExits()
-    {
-        Console.WriteLine("Opening emergency exits...");
-    }
-}
-
-class Program{
-    static void Main(){
-        // Subscribing to the event
-        Broadcaster broadcaster = new Broadcaster();
-        Subs subs = new Subs();
-
-        broadcaster.FireAlarm += subs.CallFireDepartment;
-        broadcaster.FireAlarm += subs.OpenEmergencyExits;
-
-        // Trigger the fire alarm
-        broadcaster.DetectFire();
+        Stock stock = new Stock();
+        stock.PriceChanged += (sender, e) => Console.WriteLine("Price changed!");
+        
+        // Trigger the event
+        stock.ChangePrice(200m);
     }
 }

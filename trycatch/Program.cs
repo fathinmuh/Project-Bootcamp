@@ -15,7 +15,7 @@
     }
 }
 
-public class Operasi{
+public class OpResult{
 public OperationResult<int> TryDivide(int numerator, int denominator)
 {
     if (denominator == 0)
@@ -26,12 +26,13 @@ public OperationResult<int> TryDivide(int numerator, int denominator)
     return OperationResult<int>.SuccessResult(numerator / denominator);
 }
 }
+
 class Program
 {
     static void Main()
     {
-        Operasi operasi = new ();
-        var result = operasi.TryDivide(10, 0);
+        OpResult opResult = new ();
+        var result = opResult.TryDivide(10, 0);
 
         if (result.Success)
         {
