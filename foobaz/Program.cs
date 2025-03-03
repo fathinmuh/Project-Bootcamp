@@ -1,37 +1,40 @@
-﻿// See https://aka.ms/new-console-template for more information
-IEnumerable<int> Fibs(int fibCount)
+﻿
+// public delegate foobarjazz();
+public class DeretBilangan
 {
-    int prevFib = 1, curFib = 1;
-    for (int i = 0; i <= fibCount; i++)
+    // public void event Foo;
+    public void PrintNumbers(int n)
     {
-        yield return prevFib;
-        int newFib = prevFib + curFib;
-        prevFib = newFib;
-        // curFib = newFib;
+        for (int i = 1; i <= n; i++)
+        {
+            Console.Write(i + " ");
+        }
     }
 }
 
-string n = Console.ReadLine();
-int x= int.Parse(n);
+public class Kelipatan{
+    public void Kelipatan7()
+    {
+        Console.Write("Jazz ");
+    }
 
+    public void Kelipatan5()
+    {
+        Console.Write("Bar ");
+    }
 
-foreach (int fib in Fibs(x))
-{
-    Console.Write(fib + " ");
+    public void Kelipatan3()
+    {
+        Console.Write("Jaz ");
+    }
 }
 
-// for (int i = 1; i < x; i++)
-// {
-//     if (((i % 3) == 0)&&((i % 5)==0 )){
-//     Console.Write("foobar, ");
-//     }
-//     else if ((i % 3) == 0){
-//     Console.Write("foo, ");
-//     }
-//     else if ((i % 5) == 0){
-//     Console.Write("bar, ");
-//     }
-//     else Console.Write(i+", ");
-// }
 
-
+class Program{
+    static void Main(){
+        DeretBilangan deretBilangan = new();
+        string x = Console.ReadLine();
+        int y = int.Parse(x);
+        deretBilangan.PrintNumbers(y);
+    }
+}
