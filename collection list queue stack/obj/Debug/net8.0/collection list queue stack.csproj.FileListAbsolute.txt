@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\bin\Debug\net8.0\collection list queue stack.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\bin\Debug\net8.0\collection list queue stack.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\bin\Debug\net8.0\collection list queue stack.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\bin\Debug\net8.0\collection list queue stack.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\bin\Debug\net8.0\collection list queue stack.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\obj\Debug\net8.0\collection list queue stack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\obj\Debug\net8.0\collection list queue stack.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\obj\Debug\net8.0\collection list queue stack.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\obj\Debug\net8.0\collection list queue stack.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\obj\Debug\net8.0\collection list queue stack.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\obj\Debug\net8.0\collection list queue stack.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\obj\Debug\net8.0\refint\collection list queue stack.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\obj\Debug\net8.0\collection list queue stack.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\obj\Debug\net8.0\collection list queue stack.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\collection list queue stack\obj\Debug\net8.0\ref\collection list queue stack.dll

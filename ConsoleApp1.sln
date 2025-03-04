@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "collection enumeration", "c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "collection array", "collection array\collection array.csproj", "{45EB2096-69B7-4011-83C6-F8036D774F7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "collection list queue stack", "collection list queue stack\collection list queue stack.csproj", "{0AD43F24-FD24-4CC5-A654-FE4481905250}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -168,5 +170,9 @@ Global
 		{45EB2096-69B7-4011-83C6-F8036D774F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45EB2096-69B7-4011-83C6-F8036D774F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45EB2096-69B7-4011-83C6-F8036D774F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD43F24-FD24-4CC5-A654-FE4481905250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD43F24-FD24-4CC5-A654-FE4481905250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD43F24-FD24-4CC5-A654-FE4481905250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD43F24-FD24-4CC5-A654-FE4481905250}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
