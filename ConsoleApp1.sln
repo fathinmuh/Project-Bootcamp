@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework date and times", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework formatting and parsing", "framework formatting and parsing\framework formatting and parsing.csproj", "{B46E7157-6637-4781-AC93-AF15E61623A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework other conversion", "framework other conversion\framework other conversion.csproj", "{C53251AC-AC1E-482C-8E28-F763CC777FEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework conversion", "framework conversion\framework conversion.csproj", "{CA721B52-3480-4C31-827F-15BBB1DFCE4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -108,5 +112,13 @@ Global
 		{B46E7157-6637-4781-AC93-AF15E61623A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B46E7157-6637-4781-AC93-AF15E61623A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B46E7157-6637-4781-AC93-AF15E61623A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C53251AC-AC1E-482C-8E28-F763CC777FEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C53251AC-AC1E-482C-8E28-F763CC777FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C53251AC-AC1E-482C-8E28-F763CC777FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C53251AC-AC1E-482C-8E28-F763CC777FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA721B52-3480-4C31-827F-15BBB1DFCE4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA721B52-3480-4C31-827F-15BBB1DFCE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA721B52-3480-4C31-827F-15BBB1DFCE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA721B52-3480-4C31-827F-15BBB1DFCE4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
