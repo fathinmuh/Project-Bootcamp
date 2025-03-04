@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\bin\Debug\net8.0\framework working with number.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\bin\Debug\net8.0\framework working with number.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\bin\Debug\net8.0\framework working with number.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\bin\Debug\net8.0\framework working with number.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\bin\Debug\net8.0\framework working with number.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\obj\Debug\net8.0\framework working with number.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\obj\Debug\net8.0\framework working with number.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\obj\Debug\net8.0\framework working with number.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\obj\Debug\net8.0\framework working with number.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\obj\Debug\net8.0\framework working with number.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\obj\Debug\net8.0\framework working with number.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\obj\Debug\net8.0\refint\framework working with number.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\obj\Debug\net8.0\framework working with number.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\obj\Debug\net8.0\framework working with number.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework working with number\obj\Debug\net8.0\ref\framework working with number.dll

@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework other conversion"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework conversion", "framework conversion\framework conversion.csproj", "{CA721B52-3480-4C31-827F-15BBB1DFCE4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework working with number", "framework working with number\framework working with number.csproj", "{087EC1E3-2A35-4DEB-AC7F-593DA03C6089}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -120,5 +122,9 @@ Global
 		{CA721B52-3480-4C31-827F-15BBB1DFCE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA721B52-3480-4C31-827F-15BBB1DFCE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA721B52-3480-4C31-827F-15BBB1DFCE4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{087EC1E3-2A35-4DEB-AC7F-593DA03C6089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{087EC1E3-2A35-4DEB-AC7F-593DA03C6089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{087EC1E3-2A35-4DEB-AC7F-593DA03C6089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{087EC1E3-2A35-4DEB-AC7F-593DA03C6089}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
