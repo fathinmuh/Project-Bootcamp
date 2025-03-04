@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\bin\Debug\net8.0\framework equality comparisson.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\bin\Debug\net8.0\framework equality comparisson.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\bin\Debug\net8.0\framework equality comparisson.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\bin\Debug\net8.0\framework equality comparisson.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\bin\Debug\net8.0\framework equality comparisson.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\obj\Debug\net8.0\framework equality comparisson.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\obj\Debug\net8.0\framework equality comparisson.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\obj\Debug\net8.0\framework equality comparisson.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\obj\Debug\net8.0\framework equality comparisson.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\obj\Debug\net8.0\framework equality comparisson.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\obj\Debug\net8.0\framework equality comparisson.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\obj\Debug\net8.0\refint\framework equality comparisson.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\obj\Debug\net8.0\framework equality comparisson.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\obj\Debug\net8.0\framework equality comparisson.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework equality comparisson\obj\Debug\net8.0\ref\framework equality comparisson.dll
