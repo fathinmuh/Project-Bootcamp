@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "date and times", "date and 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework date and times", "framework date and times\framework date and times.csproj", "{B3797B67-171B-462A-95E6-53AA61EB23DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework formatting and parsing", "framework formatting and parsing\framework formatting and parsing.csproj", "{B46E7157-6637-4781-AC93-AF15E61623A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,5 +104,9 @@ Global
 		{B3797B67-171B-462A-95E6-53AA61EB23DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3797B67-171B-462A-95E6-53AA61EB23DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3797B67-171B-462A-95E6-53AA61EB23DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B46E7157-6637-4781-AC93-AF15E61623A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B46E7157-6637-4781-AC93-AF15E61623A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B46E7157-6637-4781-AC93-AF15E61623A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B46E7157-6637-4781-AC93-AF15E61623A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

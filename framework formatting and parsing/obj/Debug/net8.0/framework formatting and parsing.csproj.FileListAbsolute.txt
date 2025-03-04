@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\bin\Debug\net8.0\framework formatting and parsing.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\bin\Debug\net8.0\framework formatting and parsing.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\bin\Debug\net8.0\framework formatting and parsing.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\bin\Debug\net8.0\framework formatting and parsing.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\bin\Debug\net8.0\framework formatting and parsing.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\obj\Debug\net8.0\framework formatting and parsing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\obj\Debug\net8.0\framework formatting and parsing.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\obj\Debug\net8.0\framework formatting and parsing.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\obj\Debug\net8.0\framework formatting and parsing.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\obj\Debug\net8.0\framework formatting and parsing.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\obj\Debug\net8.0\framework formatting and parsing.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\obj\Debug\net8.0\refint\framework formatting and parsing.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\obj\Debug\net8.0\framework formatting and parsing.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\obj\Debug\net8.0\framework formatting and parsing.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework formatting and parsing\obj\Debug\net8.0\ref\framework formatting and parsing.dll
