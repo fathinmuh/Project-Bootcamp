@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework enums", "framewor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework equality comparisson", "framework equality comparisson\framework equality comparisson.csproj", "{07D3772A-996E-4037-A992-7D87EAD82FD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework utility", "framework utility\framework utility.csproj", "{834F4AE0-E3BD-49F8-A79E-F80CFA207B48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -144,5 +146,9 @@ Global
 		{07D3772A-996E-4037-A992-7D87EAD82FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07D3772A-996E-4037-A992-7D87EAD82FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07D3772A-996E-4037-A992-7D87EAD82FD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{834F4AE0-E3BD-49F8-A79E-F80CFA207B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{834F4AE0-E3BD-49F8-A79E-F80CFA207B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{834F4AE0-E3BD-49F8-A79E-F80CFA207B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{834F4AE0-E3BD-49F8-A79E-F80CFA207B48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
