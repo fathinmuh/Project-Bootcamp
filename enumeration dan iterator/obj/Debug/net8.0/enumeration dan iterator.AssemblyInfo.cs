@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("enumeration dan iterator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e5d62170558fab994d4823cbaad71552df9606c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7f553c6b78713f8d3c33814b47fb7586c546a84")]
 [assembly: System.Reflection.AssemblyProductAttribute("enumeration dan iterator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("enumeration dan iterator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

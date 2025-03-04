@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "operator overloading", "ope
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "foobaz", "foobaz\foobaz.csproj", "{5002C5F7-AB31-4136-B51C-3E94A93AB99C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framework string and text handling", "framework string and text handling\framework string and text handling.csproj", "{732E2BE9-664E-49D5-B36A-72C8DBA63485}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +86,9 @@ Global
 		{5002C5F7-AB31-4136-B51C-3E94A93AB99C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5002C5F7-AB31-4136-B51C-3E94A93AB99C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5002C5F7-AB31-4136-B51C-3E94A93AB99C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{732E2BE9-664E-49D5-B36A-72C8DBA63485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{732E2BE9-664E-49D5-B36A-72C8DBA63485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{732E2BE9-664E-49D5-B36A-72C8DBA63485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{732E2BE9-664E-49D5-B36A-72C8DBA63485}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

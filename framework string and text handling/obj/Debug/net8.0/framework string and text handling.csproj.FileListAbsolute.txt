@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\bin\Debug\net8.0\framework string and text handling.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\bin\Debug\net8.0\framework string and text handling.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\bin\Debug\net8.0\framework string and text handling.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\bin\Debug\net8.0\framework string and text handling.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\bin\Debug\net8.0\framework string and text handling.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\obj\Debug\net8.0\framework string and text handling.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\obj\Debug\net8.0\framework string and text handling.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\obj\Debug\net8.0\framework string and text handling.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\obj\Debug\net8.0\framework string and text handling.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\obj\Debug\net8.0\framework string and text handling.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\obj\Debug\net8.0\framework string and text handling.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\obj\Debug\net8.0\refint\framework string and text handling.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\obj\Debug\net8.0\framework string and text handling.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\obj\Debug\net8.0\framework string and text handling.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework string and text handling\obj\Debug\net8.0\ref\framework string and text handling.dll
