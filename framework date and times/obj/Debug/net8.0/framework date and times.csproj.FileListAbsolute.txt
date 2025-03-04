@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\bin\Debug\net8.0\framework date and times.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\bin\Debug\net8.0\framework date and times.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\bin\Debug\net8.0\framework date and times.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\bin\Debug\net8.0\framework date and times.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\bin\Debug\net8.0\framework date and times.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\obj\Debug\net8.0\framework date and times.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\obj\Debug\net8.0\framework date and times.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\obj\Debug\net8.0\framework date and times.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\obj\Debug\net8.0\framework date and times.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\obj\Debug\net8.0\framework date and times.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\obj\Debug\net8.0\framework date and times.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\obj\Debug\net8.0\refint\framework date and times.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\obj\Debug\net8.0\framework date and times.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\obj\Debug\net8.0\framework date and times.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\framework date and times\obj\Debug\net8.0\ref\framework date and times.dll
