@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("framework other conversion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+308e55bfecec9066802af71b01e3c54b76d48be3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60815cdeaf6b36f957195dfc227550a3f89f7052")]
 [assembly: System.Reflection.AssemblyProductAttribute("framework other conversion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("framework other conversion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

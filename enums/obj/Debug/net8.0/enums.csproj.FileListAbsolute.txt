@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\obj\Debug\net8.0\enums.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\obj\Debug\net8.0\enums.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\obj\Debug\net8.0\enums.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\obj\Debug\net8.0\enums.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\obj\Debug\net8.0\enums.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\bin\Debug\net8.0\enums.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\bin\Debug\net8.0\enums.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\bin\Debug\net8.0\enums.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\bin\Debug\net8.0\enums.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\bin\Debug\net8.0\enums.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\obj\Debug\net8.0\enums.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\obj\Debug\net8.0\refint\enums.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\obj\Debug\net8.0\enums.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\obj\Debug\net8.0\enums.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\enums\obj\Debug\net8.0\ref\enums.dll

@@ -1,2 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿public class Panda
+{
+    public string Name;
+    public override string ToString() => Name;
+}
+
+class program{
+    static void Main(){
+        Panda p = new Panda { Name = "Petey" };
+        Console.WriteLine(p);
+    }
+}
