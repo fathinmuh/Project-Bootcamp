@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("framework formatting and parsing")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60815cdeaf6b36f957195dfc227550a3f89f7052")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+021f4b038ab70f1fef1fba69be17ff24741a9a5e")]
 [assembly: System.Reflection.AssemblyProductAttribute("framework formatting and parsing")]
 [assembly: System.Reflection.AssemblyTitleAttribute("framework formatting and parsing")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
