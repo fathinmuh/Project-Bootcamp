@@ -77,28 +77,30 @@ public interface IPlayer{
 public class Player:IPlayer{
     public int Id{get;}
     public string Name{get;}
-    public bool IsBot{get;}
     public Player(int id, string name){
         Id = id;
         Name = name;
-        // IsBot = isBot;
     }
     public override string ToString()
     {
-        return Name +  (IsBot ? " (Bot)" : "");
+        return Name;
     }
 }
 
 public interface IBoard{
-    void UpdateBoard(Card card, IPlayer player);
+    void UpdateBoard(Card card, IPlayer player, bool posisi);
     List<Card> GetBoard();
 }
 
 public class Board:Card,IBoard{
     private List<Card> playedCards;
-    public void UpdateBoard(Card card, IPlayer player){
-        playedCards.Add(card);
-        // Display.ShowCardPlayed(player, card);
+    public void UpdateBoard(Card card, IPlayer player, bool posisi){
+        if(posisi){
+            playedCards.Add(card);
+        }
+        else {
+            playedCards.Insert(0, card);
+        }
     }
     public List<Card> GetBoard(){
         return playedCards;
@@ -148,10 +150,10 @@ public class GameController{
         }
     }
 
-    public void PlayCard(IPlayer player, Card card)
+    public void PlayCard(IPlayer player, Card card, bool posisi)
     {
         hand[player].Remove(card);
-        board.UpdateBoard(card,player);
+        board.UpdateBoard(card,player,posisi);
         Display.ShowBoard(board.GetBoard());
     }
 
@@ -190,25 +192,29 @@ public class GameController{
     }
     public Dictionary<int, Card> GetPlayableMoves(IPlayer player)
     {
-        // Dapatkan kartu yang sudah ada di board
         List<Card> boardCards = board.GetBoard();
-        if (boardCards.Count == 0) return hand[player].ToDictionary(c => c.Id, c => c); // Jika board kosong, semua kartu bisa dimainkan
+        if (boardCards.Count == 0) return hand[player].ToDictionary(c => c.Id, c => c);
 
-        // Ambil nilai dari ujung board
         int leftValue = boardCards.First().FirstFaceValue;
         int rightValue = boardCards.Last().SecondFaceValue;
 
-        // Cek kartu pemain yang cocok dengan salah satu ujung board
         foreach (Card card in hand[player])
         {
             if (card.FirstFaceValue == leftValue || card.SecondFaceValue == leftValue ||
                 card.FirstFaceValue == rightValue || card.SecondFaceValue == rightValue)
             {
-                moveOptions[card.Id] = card; // Tambahkan kartu yang bisa dimainkan
+                moveOptions[card.Id] = card;
             }
         }
 
         return moveOptions;
+    }
+    public void CheckNumber(){
+        List<Card> boardCards = board.GetBoard();
+        int leftValue = boardCards.First().FirstFaceValue;
+        int rightValue = boardCards.Last().SecondFaceValue;
+        Console.WriteLine(leftValue);
+        Console.WriteLine(rightValue);
     }
  
 
@@ -246,26 +252,30 @@ public static class Display
         return Console.ReadLine();
     }
 
-    public static void ShowHands(Dictionary<IPlayer, List<Card>> hands)
-    {
-        foreach (var entry in hands)
-        {
-            Console.WriteLine($"{entry.Key.Name}'s Hand: {string.Join(", ", entry.Value)}");
-        }
-    }
-
     public static void ShowCurrentPlayer(IPlayer currentPlayer)
     {
         Console.WriteLine(currentPlayer != null ? $"{currentPlayer.Name} mulai duluan!" : "Tidak ada yang punya kartu double, pilih pemain pertama secara acak.");
     }
-    public static Card ChooseCardToPlay(IPlayer player, List<Card> playerHand)
+    public static Card ShowHands(IPlayer player, List<Card> playerHand, Dictionary<int, Card> moveOptions)
     {
         Console.WriteLine();
         Console.WriteLine($"{player.Name}, pilih kartu yang akan dimainkan:");
+
         for (int i = 0; i < playerHand.Count; i++)
         {
-            Console.Write($"{i + 1}.{playerHand[i]}  ");
+            Card card = playerHand[i];
+            bool isPlayable = moveOptions.ContainsKey(card.Id);
+
+            // Ubah warna teks jika kartu bisa dimainkan
+            if (isPlayable)
+                Console.ForegroundColor = ConsoleColor.Green; // Warna hijau untuk kartu yang bisa dimainkan
+            else
+                Console.ForegroundColor = ConsoleColor.Gray;  // Warna abu-abu untuk kartu yang tidak bisa dimainkan
+
+            Console.Write($"{i + 1}.{card}  ");
         }
+
+        Console.ResetColor(); // Kembalikan warna asli
         Console.WriteLine();
         int choice;
         while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > playerHand.Count)
@@ -275,7 +285,14 @@ public static class Display
 
         return playerHand[choice - 1];
     }    
-
+    public static bool PlacementSide(){
+        Console.WriteLine("KIRI atau KANAN");
+        while(true){
+            string input=Console.ReadLine();
+            if (input == "KIRI") return false;
+            if (input == "KANAN") return true;
+        }
+    }
 }
 
 public class Program
@@ -285,8 +302,6 @@ public class Program
         Deck deck = new Deck();
         GameController gameController = new GameController(deck);
 
-        
-        // Display.InitializeBoardDisplay();
         int numPlayers = Display.SetupPlayers();
 
         var players = new List<IPlayer>();
@@ -297,8 +312,7 @@ public class Program
         }
 
         gameController.AssignPlayers(players);
-        gameController.DealCards(7);
-        // Display.ShowHands(gameController.GetHands());
+        gameController.DealCards(3);
 
         var currentPlayer = gameController.DetermineFirstPlayer();
         Display.ShowCurrentPlayer(currentPlayer);
@@ -307,39 +321,34 @@ public class Program
         // Pemain pertama memainkan kartu
         if (currentPlayer != null)
         {
+            Dictionary<int, Card> moveOptions=gameController.GetPlayableMoves(currentPlayer);
             var playerHand = gameController.GetHands()[currentPlayer];
             if (playerHand.Any())
             {
-                Card chosenCard = Display.ChooseCardToPlay(currentPlayer, playerHand);
-                gameController.PlayCard(currentPlayer, chosenCard);
+                // Dictionary<int, Card> moveOptions=gameController.GetPlayableMoves(currentPlayer);
+                Card chosenCard = Display.ShowHands(currentPlayer, playerHand,moveOptions);
+                bool posisi= true;
+                gameController.PlayCard(currentPlayer, chosenCard,posisi);
             }
         }
-
-
 
         while (true){
             gameController.NextTurn(player =>
             {
+                
                 var playerHand = gameController.GetHands()[player];
                 if (playerHand.Any())
                 {
-                    Card chosenCard = Display.ChooseCardToPlay(player, playerHand);
-                    gameController.PlayCard(player, chosenCard);
-                    // Display.ShowBoard(gameController.GetBoard());
+                    Dictionary<int, Card> moveOptions=gameController.GetPlayableMoves(player);
+                    Card chosenCard = Display.ShowHands(player, playerHand,moveOptions);
+                    bool posisi = Display.PlacementSide();
+                    gameController.PlayCard(player, chosenCard,posisi);
+                    // gameController.CheckNumber();
+                    
                 }
             });
-        }
-        Dictionary<int, Card> moves = gameController.GetPlayableMoves(currentPlayer);
-
-        if (moves.Count == 0)
-        {
-            Console.WriteLine($"{currentPlayer.Name} tidak bisa bermain!");
-        }
-        else
-        {
-            Console.WriteLine($"{currentPlayer.Name} bisa memainkan: {string.Join(", ", moves.Values)}");
-        }
-      
+        }     
 
     }
 }
+
