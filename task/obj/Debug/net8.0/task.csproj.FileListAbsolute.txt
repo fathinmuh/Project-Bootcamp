@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\bin\Debug\net8.0\task.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\bin\Debug\net8.0\task.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\bin\Debug\net8.0\task.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\bin\Debug\net8.0\task.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\bin\Debug\net8.0\task.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\obj\Debug\net8.0\task.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\obj\Debug\net8.0\task.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\obj\Debug\net8.0\task.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\obj\Debug\net8.0\task.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\obj\Debug\net8.0\task.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\obj\Debug\net8.0\task.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\obj\Debug\net8.0\refint\task.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\obj\Debug\net8.0\task.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\obj\Debug\net8.0\task.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\task\obj\Debug\net8.0\ref\task.dll
