@@ -193,7 +193,7 @@ public class GameController{
     public Dictionary<int, Card> GetPlayableMoves(IPlayer player)
     {
         List<Card> boardCards = board.GetBoard();
-        if (boardCards.Count == 0) return hand[player].ToDictionary(c => c.Id, c => c);
+        // if (boardCards.Count == 0) return hand[player].ToDictionary(c => c.Id, c => c);
 
         int leftValue = boardCards.First().FirstFaceValue;
         int rightValue = boardCards.Last().SecondFaceValue;
@@ -203,18 +203,26 @@ public class GameController{
             if (card.FirstFaceValue == leftValue || card.SecondFaceValue == leftValue ||
                 card.FirstFaceValue == rightValue || card.SecondFaceValue == rightValue)
             {
-                moveOptions[card.Id] = card;
+                Console.WriteLine(card);
+                Console.WriteLine(card.Id);
+                moveOptions[card.Id,] = card;
             }
+            // Console.WriteLine(card.FirstFaceValue);
         }
 
         return moveOptions;
+        
     }
+   
+   
+
     public void CheckNumber(){
         List<Card> boardCards = board.GetBoard();
         int leftValue = boardCards.First().FirstFaceValue;
         int rightValue = boardCards.Last().SecondFaceValue;
         Console.WriteLine(leftValue);
         Console.WriteLine(rightValue);
+        Console.WriteLine("Board saat ini: " + string.Join(", ", boardCards.Select(c => $"(ID: {c.Id}) {c}")));
     }
  
 
@@ -300,7 +308,7 @@ public class Program
         }
 
         gameController.AssignPlayers(players);
-        gameController.DealCards(3);
+        gameController.DealCards(5);
 
         var currentPlayer = gameController.DetermineFirstPlayer();
         Display.ShowCurrentPlayer(currentPlayer);
@@ -321,13 +329,14 @@ public class Program
         while (true){
             gameController.NextTurn(player =>
             {
+                Dictionary<int, Card> playableMove = gameController.GetPlayableMoves(player);
                 var playerHand = gameController.GetHands()[player];
                 if (playerHand.Any())
                 {
                     Card chosenCard = Display.ShowHands(player, playerHand);
-                    bool posisi = Display.PlacementSide();
+                    bool posisi = true;
                     gameController.PlayCard(player, chosenCard,posisi);
-                    gameController.CheckNumber();
+                    // gameController.CheckNumber();
                     
                 }
             });
