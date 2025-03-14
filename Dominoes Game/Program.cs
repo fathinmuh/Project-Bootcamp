@@ -194,7 +194,7 @@ public class GameController{
     {
         List<Card> boardCards = board.GetBoard();
         // if (boardCards.Count == 0) return hand[player].ToDictionary(c => c.Id, c => c);
-
+        Dictionary<int, Card> moveOptions = new Dictionary<int, Card>(); // Reset tiap kali method dipanggil
         int leftValue = boardCards.First().FirstFaceValue;
         int rightValue = boardCards.Last().SecondFaceValue;
 
@@ -203,13 +203,9 @@ public class GameController{
             if (card.FirstFaceValue == leftValue || card.SecondFaceValue == leftValue ||
                 card.FirstFaceValue == rightValue || card.SecondFaceValue == rightValue)
             {
-                Console.WriteLine(card);
-                Console.WriteLine(card.Id);
-                moveOptions[card.Id,] = card;
+                moveOptions[card.Id] = card;
             }
-            // Console.WriteLine(card.FirstFaceValue);
         }
-
         return moveOptions;
         
     }
@@ -264,14 +260,24 @@ public static class Display
     {
         Console.WriteLine(currentPlayer != null ? $"{currentPlayer.Name} mulai duluan!" : "Tidak ada yang punya kartu double, pilih pemain pertama secara acak.");
     }
-    public static Card ShowHands(IPlayer player, List<Card> playerHand)
+    public static Card ShowHands(IPlayer player, List<Card> playerHand, Dictionary<int, Card> moveOptions)
     {
         Console.WriteLine();
         Console.WriteLine($"{player.Name}, pilih kartu yang akan dimainkan:");
         for (int i = 0; i < playerHand.Count; i++)
         {
-            Console.Write($"{i + 1}.{playerHand[i]}  ");
+            Card card = playerHand[i];
+            bool isPlayable = moveOptions.ContainsKey(card.Id);
+
+            // Ubah warna teks jika kartu bisa dimainkan
+            if (isPlayable)
+                Console.ForegroundColor = ConsoleColor.Green; // Warna hijau untuk kartu yang bisa dimainkan
+            else
+                Console.ForegroundColor = ConsoleColor.Gray;  // Warna abu-abu untuk kartu yang tidak bisa dimainkan
+
+            Console.Write($"{i + 1}.{card}  ");
         }
+        Console.ResetColor();
         Console.WriteLine();
         int choice;
         while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > playerHand.Count)
@@ -317,10 +323,11 @@ public class Program
         // Pemain pertama memainkan kartu
         if (currentPlayer != null)
         {
+            Dictionary<int, Card> moveOptions=gameController.GetPlayableMoves(currentPlayer);
             var playerHand = gameController.GetHands()[currentPlayer];
             if (playerHand.Any())
             {
-                Card chosenCard = Display.ShowHands(currentPlayer, playerHand);
+                Card chosenCard = Display.ShowHands(currentPlayer, playerHand, moveOptions);
                 bool posisi= true;
                 gameController.PlayCard(currentPlayer, chosenCard,posisi);
             }
@@ -329,14 +336,13 @@ public class Program
         while (true){
             gameController.NextTurn(player =>
             {
-                Dictionary<int, Card> playableMove = gameController.GetPlayableMoves(player);
+                Dictionary<int, Card> moveOptions = gameController.GetPlayableMoves(player);
                 var playerHand = gameController.GetHands()[player];
                 if (playerHand.Any())
                 {
-                    Card chosenCard = Display.ShowHands(player, playerHand);
+                    Card chosenCard = Display.ShowHands(player, playerHand,moveOptions);
                     bool posisi = true;
                     gameController.PlayCard(player, chosenCard,posisi);
-                    // gameController.CheckNumber();
                     
                 }
             });
@@ -345,13 +351,3 @@ public class Program
     }
 }
 
-        // Dictionary<int, Card> moves = gameController.GetPlayableMoves(currentPlayer);
-
-        // if (moves.Count == 0)
-        // {
-        //     Console.WriteLine($"{currentPlayer.Name} tidak bisa bermain!");
-        // }
-        // else
-        // {
-        //     Console.WriteLine($"{currentPlayer.Name} bisa memainkan: {string.Join(", ", moves.Values)}");
-        // }
