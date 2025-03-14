@@ -119,7 +119,10 @@ public class GameController{
     private Dictionary<int, Card> moveOptions;
     private IPlayer currentPlayer;
     private int currentPlayerIndex=0;
+    Action onGameStart;
     Action<IPlayer> onPlayerTurn;
+    Action<bool> onGameOver;
+
 
     public GameController(IDeck deck)
     {
@@ -128,6 +131,13 @@ public class GameController{
         players = new List<IPlayer>();
         hand = new Dictionary<IPlayer, List<Card>>();
         board=new Board(0,0,0);
+    }
+    public void StartGame()
+    {
+        onGameStart?.Invoke();
+        currentPlayer = DetermineFirstPlayer();
+        Display.ShowCurrentPlayer(currentPlayer);
+        RandomizeTurnOrder(currentPlayer);
     }
     public void AssignPlayers(List<IPlayer> playerList)
     {
@@ -190,27 +200,73 @@ public class GameController{
             onPlayerTurn(currentPlayer);
         }
     }
-    public Dictionary<int, Card> GetPlayableMoves(IPlayer player)
+    public Dictionary<int, (Card,bool canPlaceLeft, bool canPlaceRight)> GetPlayableMoves(IPlayer player)
     {
         List<Card> boardCards = board.GetBoard();
-        Dictionary<int, Card> moveOptions = new Dictionary<int, Card>();
-        if (boardCards.Count == 0) return hand[player].ToDictionary(c => c.Id, c => c);
+        var moveOptions = new Dictionary<int, (Card,bool,bool)>();
+        if (boardCards.Count == 0)
+        {
+            foreach (var card in hand[player])
+            {
+                moveOptions[card.Id] = (card, true, true);
+            }
+            return moveOptions;
+        }
         
         int leftValue = boardCards.First().FirstFaceValue;
         int rightValue = boardCards.Last().SecondFaceValue;
 
         foreach (Card card in hand[player])
         {
-
-            if (boardCards.Count == 0 || card.FirstFaceValue == leftValue || card.SecondFaceValue == leftValue ||
-                card.FirstFaceValue == rightValue || card.SecondFaceValue == rightValue)
+            bool canPlaceLeft = (card.FirstFaceValue == leftValue || card.SecondFaceValue == leftValue);
+            bool canPlaceRight = (card.FirstFaceValue == rightValue || card.SecondFaceValue == rightValue);
+            if (canPlaceLeft || canPlaceRight)
             {
-                moveOptions[card.Id] = card;
+                moveOptions[card.Id] = (card, canPlaceLeft, canPlaceRight);
             }
         }
         return moveOptions;
         
     }
+    
+    public void PlayerTurn(IPlayer player)
+    {
+        var moveOptions = GetPlayableMoves(player);
+
+        if (moveOptions.Count == 0)
+        {
+            Console.WriteLine($"{player.Name} tidak bisa bermain dan harus skip!");
+            return;
+        }
+
+        Card chosenCard;
+        bool placeLeft;
+
+        while (true)
+        {
+            chosenCard = Display.ShowHands(player, hand[player], moveOptions);
+            placeLeft = Display.PlacementSide(); // Pemain memilih kiri atau kanan
+
+            if (IsMoveValid(chosenCard, placeLeft, moveOptions))
+                break;
+
+            Console.WriteLine("Kartu ini tidak bisa diletakkan di posisi yang dipilih! Coba lagi.");
+        }
+
+        // Jika valid, tambahkan ke board
+        // board.UpdateBoard(chosenCard, player, placeLeft);
+        // hand[player].Remove(chosenCard);
+    }
+
+    public bool IsMoveValid(Card card, bool placeLeft, Dictionary<int, (Card card, bool canPlaceLeft, bool canPlaceRight)> moveOptions)
+    {
+        if (!moveOptions.ContainsKey(card.Id)) return false; // Jika kartu tidak ada di moveOptions, berarti tidak bisa dimainkan
+        
+        var (selectedCard, canPlaceLeft, canPlaceRight) = moveOptions[card.Id];
+
+        return placeLeft ? canPlaceLeft : canPlaceRight;
+    }
+
 
 }
 
@@ -250,7 +306,7 @@ public static class Display
     {
         Console.WriteLine(currentPlayer != null ? $"{currentPlayer.Name} mulai duluan!" : "Tidak ada yang punya kartu double, pilih pemain pertama secara acak.");
     }
-    public static Card ShowHands(IPlayer player, List<Card> playerHand, Dictionary<int, Card> moveOptions)
+    public static Card ShowHands(IPlayer player, List<Card> playerHand, Dictionary<int, (Card card, bool canPlaceLeft, bool canPlaceRight)> moveOptions)
     {
         Console.WriteLine();
         Console.WriteLine($"{player.Name}, pilih kartu yang akan dimainkan:");
@@ -262,7 +318,7 @@ public static class Display
             if (isPlayable)
                 Console.ForegroundColor = ConsoleColor.Green;
             else
-                Console.ForegroundColor = ConsoleColor.Gray;  // Warna abu-abu untuk kartu yang tidak bisa dimainkan
+                Console.ForegroundColor = ConsoleColor.Gray;
 
             Console.Write($"{i + 1}.{card}  ");
 
@@ -285,6 +341,7 @@ public static class Display
             if (input == "kiri") return false;
             if (input == "kanan") return true;
         }
+        
     }
 }
 
@@ -295,6 +352,7 @@ public class Program
         Deck deck = new Deck();
         GameController gameController = new GameController(deck);
 
+        
         int numPlayers = Display.SetupPlayers();
 
         var players = new List<IPlayer>();
@@ -317,7 +375,7 @@ public class Program
             var playerHand = gameController.GetHands()[currentPlayer];
             if (playerHand.Any())
             {
-                Dictionary<int, Card> moveOptions=gameController.GetPlayableMoves(currentPlayer);
+                Dictionary<int, (Card card, bool canPlaceLeft, bool canPlaceRight)> moveOptions=gameController.GetPlayableMoves(currentPlayer);
                 Card chosenCard = Display.ShowHands(currentPlayer, playerHand,moveOptions);
                 bool posisi= true;
                 gameController.PlayCard(currentPlayer, chosenCard,posisi);
@@ -327,17 +385,19 @@ public class Program
         while (true){
             gameController.NextTurn(player =>
             {
-                Dictionary<int, Card> moveOptions=gameController.GetPlayableMoves(player);
+                Dictionary<int, (Card card, bool canPlaceLeft, bool canPlaceRight)> moveOptions=gameController.GetPlayableMoves(player);
                 var playerHand = gameController.GetHands()[player];
                 if (playerHand.Any())
                 {                  
                     Card chosenCard = Display.ShowHands(player, playerHand,moveOptions);
-                    bool posisi = true;
+                    bool posisi = Display.PlacementSide();
+                    gameController.PlayerTurn(player);
                     gameController.PlayCard(player, chosenCard,posisi);
-                    
                 }
+
             });
-        }     
+        }
+        
 
     }
 }
