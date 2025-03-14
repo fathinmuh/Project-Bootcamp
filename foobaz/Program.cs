@@ -13,7 +13,7 @@ public class PrintNumber{
             int newNumber = x + y;
             x = newNumber;
 
-            if (x % 3 == 0 || x % 5 == 0 || x % 7 == 0){
+            if (x % 3 == 0 || x % 5 == 0 || x % 7 == 0 || x % 9 == 0){
                 Kelipatan357(x);
             }
             else yield return x;
@@ -31,6 +31,9 @@ public class Kelipatan{
     public void Tujuh(int i){
         if (i % 7 == 0) Console.Write("Jazz");
     }
+    public void Sembilan(int i){
+        if (i % 9 == 0) Console.Write("Huzz");
+    }
     public void Spasi(int i){
         Console.Write(" ");
     }
@@ -47,6 +50,7 @@ class Program{
         printNumber.Fbj += kelipatan.Tiga;
         printNumber.Fbj += kelipatan.Lima;
         printNumber.Fbj += kelipatan.Tujuh;
+        printNumber.Fbj += kelipatan.Sembilan;
         printNumber.Fbj += kelipatan.Spasi;
 
         foreach (int fib in printNumber.Fibs(x)){
