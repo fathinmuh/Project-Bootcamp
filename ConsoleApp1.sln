@@ -63,6 +63,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task", "task\task.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "perbaiki game", "perbaiki game\perbaiki game.csproj", "{401C8EAC-C6E4-4464-9396-6F2ACAAC067E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "stream i", "stream i", "{F45BFA1D-75D6-4FE3-BF96-3593DE1C6DC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "o and file handling", "stream i\o and file handling\o and file handling.csproj", "{B4BDBE6B-36ED-4CE9-AD3E-A820E9E15DDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stream io and file handling", "stream io and file handling\stream io and file handling.csproj", "{C03590FB-C102-4AEE-A101-845FC4102708}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -192,5 +198,16 @@ Global
 		{401C8EAC-C6E4-4464-9396-6F2ACAAC067E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{401C8EAC-C6E4-4464-9396-6F2ACAAC067E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{401C8EAC-C6E4-4464-9396-6F2ACAAC067E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4BDBE6B-36ED-4CE9-AD3E-A820E9E15DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4BDBE6B-36ED-4CE9-AD3E-A820E9E15DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4BDBE6B-36ED-4CE9-AD3E-A820E9E15DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4BDBE6B-36ED-4CE9-AD3E-A820E9E15DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C03590FB-C102-4AEE-A101-845FC4102708}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C03590FB-C102-4AEE-A101-845FC4102708}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C03590FB-C102-4AEE-A101-845FC4102708}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C03590FB-C102-4AEE-A101-845FC4102708}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B4BDBE6B-36ED-4CE9-AD3E-A820E9E15DDA} = {F45BFA1D-75D6-4FE3-BF96-3593DE1C6DC6}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\bin\Debug\net8.0\stream io and file handling.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\bin\Debug\net8.0\stream io and file handling.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\bin\Debug\net8.0\stream io and file handling.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\bin\Debug\net8.0\stream io and file handling.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\bin\Debug\net8.0\stream io and file handling.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\obj\Debug\net8.0\stream io and file handling.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\obj\Debug\net8.0\stream io and file handling.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\obj\Debug\net8.0\stream io and file handling.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\obj\Debug\net8.0\stream io and file handling.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\obj\Debug\net8.0\stream io and file handling.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\obj\Debug\net8.0\stream io and file handling.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\obj\Debug\net8.0\refint\stream io and file handling.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\obj\Debug\net8.0\stream io and file handling.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\obj\Debug\net8.0\stream io and file handling.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\stream io and file handling\obj\Debug\net8.0\ref\stream io and file handling.dll

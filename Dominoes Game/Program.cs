@@ -117,12 +117,12 @@ public class GameController{ 
     private IBoard board;    
     private List<IPlayer> players;    
     private Dictionary<IPlayer,List<Card>> hand;    
-    private Dictionary<int, Card> moveOptions;    
-    private IPlayer currentPlayer;    
+    private Dictionary<int, Card>? moveOptions;    
+    private IPlayer? currentPlayer;    
     private int currentPlayerIndex=0;    
-    Action onGameStart;    
-    Action<IPlayer> onPlayerTurn;    
-    Action<bool> onGameOver;
+    Action? onGameStart;    
+    Action<IPlayer>? onPlayerTurn;    
+    Action<bool>? onGameOver;
 
     public GameController(IDeck deck)    
     {        
@@ -157,16 +157,7 @@ public class GameController{ 
             }        
         }    
     }
-//     public void SetCurrentPlayer(IPlayer player)    
-//     {        
-//         currentPlayer = player;    
-//     }
-
-//     public IPlayer GetCurrentPlayer()    
-//     {        
-//         return currentPlayer;    
-//     }
-    public void PlayCard(IPlayer player, Card card, bool placeRight)    
+    public void PlayCard(IPlayer player, Card card, bool placeRight)    
     {        
         List<Card> boardCards = board.GetBoard();
         if (boardCards.Count > 0)        

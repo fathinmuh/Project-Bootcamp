@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "stream io and file handling/1.0.0": {
+        "runtime": {
+          "stream io and file handling.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "stream io and file handling/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
