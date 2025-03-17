@@ -39,14 +39,14 @@ public class Deck:IDeck{
 
 public interface ICard{
     int Id{get;}
-    int FirstFaceValue{get;}
-    int SecondFaceValue{get;}
+    int FirstFaceValue{get;set;}
+    int SecondFaceValue{get;set;}
 }
 public class Card : ICard
 {
     public int Id { get; }
-    public int FirstFaceValue { get; }
-    public int SecondFaceValue { get; }
+    public int FirstFaceValue { get; set;}
+    public int SecondFaceValue { get; set;}
     public Card(int id, int first, int second)
     {
         Id = id;
@@ -92,7 +92,7 @@ public interface IBoard{
     List<Card> GetBoard();
 }
 
-public class Board:Card,IBoard{
+public class Board:IBoard{
     private List<Card> playedCards;
     public void UpdateBoard(Card card, IPlayer player, bool posisi){
         if(posisi){
@@ -105,300 +105,402 @@ public class Board:Card,IBoard{
     public List<Card> GetBoard(){
         return playedCards;
     }
-    public Board(int id, int first, int second) : base(id, first, second)
+    public Board()
     {
         playedCards = new List<Card>();
     }
 }
 
-public class GameController{
-    private IDeck deck;
-    private IBoard board;
-    private List<IPlayer> players;
-    private Dictionary<IPlayer,List<Card>> hand;
-    private Dictionary<int, Card> moveOptions;
-    private IPlayer currentPlayer;
-    private int currentPlayerIndex=0;
-    Action onGameStart;
-    Action<IPlayer> onPlayerTurn;
+public class GameController{    
+    private IDeck deck;    
+    private IBoard board;    
+    private List<IPlayer> players;    
+    private Dictionary<IPlayer,List<Card>> hand;    
+    private Dictionary<int, Card> moveOptions;    
+    private IPlayer currentPlayer;    
+    private int currentPlayerIndex=0;    
+    Action onGameStart;    
+    Action<IPlayer> onPlayerTurn;    
     Action<bool> onGameOver;
 
-
-    public GameController(IDeck deck)
-    {
-        this.deck = deck;
-        this.deck.Shuffle();
-        players = new List<IPlayer>();
-        hand = new Dictionary<IPlayer, List<Card>>();
-        board=new Board(0,0,0);
-    }
-    public void StartGame()
-    {
-        onGameStart?.Invoke();
-        currentPlayer = DetermineFirstPlayer();
-        Display.ShowCurrentPlayer(currentPlayer);
-        RandomizeTurnOrder(currentPlayer);
-    }
-    public void AssignPlayers(List<IPlayer> playerList)
-    {
-        players.AddRange(playerList);
-        foreach (var player in players)
-        {
-            hand[player] = new List<Card>();
-        }
+    public GameController(IDeck deck)    
+    {        
+        this.deck = deck;        
+        this.deck.Shuffle();        
+        players = new List<IPlayer>();        
+        hand = new Dictionary<IPlayer, List<Card>>();        
+        board=new Board();    
+    }    
+    public void StartGame(Action onGameStart)    
+    {        
+        onGameStart?.Invoke();    
     }
 
-    public void DealCards(int cardsPerPlayer)
-    {
-        foreach (var player in players)
-        {
-            for (int i = 0; i < cardsPerPlayer; i++)
-            {
-                if (deck == null) break;
-                hand[player].Add(deck.DrawCard());
+    public void AssignPlayers(List<IPlayer> playerList)    
+    {        
+        players.AddRange(playerList);        
+        foreach (var player in players)        
+        {            
+            hand[player] = new List<Card>();        
+        }    
+    }
+    public void DealCards(int cardsPerPlayer)    
+    {        
+        foreach (var player in players)        
+        {            
+            for (int i = 0; i < cardsPerPlayer; i++)            
+            {                
+                if (deck == null) break;                
+                hand[player].Add(deck.DrawCard());            
+            }        
+        }    
+    }
+//     public void SetCurrentPlayer(IPlayer player)    
+//     {        
+//         currentPlayer = player;    
+//     }
+
+//     public IPlayer GetCurrentPlayer()    
+//     {        
+//         return currentPlayer;    
+//     }
+    public void PlayCard(IPlayer player, Card card, bool placeRight)    
+    {        
+        List<Card> boardCards = board.GetBoard();
+        if (boardCards.Count > 0)        
+        {            
+            int leftValue = boardCards.First().FirstFaceValue;            
+            int rightValue = boardCards.Last().SecondFaceValue;
+            if (!placeRight && card.SecondFaceValue != leftValue)        
+            {            
+                (card.FirstFaceValue, card.SecondFaceValue) = (card.SecondFaceValue, card.FirstFaceValue);        
             }
-        }
-    }
+            if (placeRight && card.FirstFaceValue != rightValue)        
+            {            
+                (card.FirstFaceValue, card.SecondFaceValue) = (card.SecondFaceValue, card.FirstFaceValue);        
+            }
+        }
 
-    public void PlayCard(IPlayer player, Card card, bool posisi)
-    {
-        hand[player].Remove(card);
-        board.UpdateBoard(card,player,posisi);
-        Display.ShowBoard(board.GetBoard());
+        hand[player].Remove(card);        
+        board.UpdateBoard(card, player, placeRight);        
+        Display.ShowBoard(board.GetBoard());    
     }
-
-    public Dictionary<IPlayer, List<Card>> GetHands()
-    {
-        return hand;
+    public Dictionary<IPlayer, List<Card>> GetHands()    
+    {        
+        return hand;    
     }
+    public IPlayer DetermineFirstPlayer()    
+    {        
+        var highestDouble = players            
+            .SelectMany(p => hand[p], (player, card) => new { player, card })            
+            .Where(x => x.card.IsDouble())            
+            .OrderByDescending(x => x.card.GetHighestValue())            
+            .FirstOrDefault();
+        if (highestDouble != null)
+            return highestDouble.player; 
 
-    public IPlayer DetermineFirstPlayer()
-    {
-        var highestDouble = players
+        var highestValueCard = players
             .SelectMany(p => hand[p], (player, card) => new { player, card })
-            .Where(x => x.card.IsDouble())
-            .OrderByDescending(x => x.card.GetHighestValue())
+            .OrderByDescending(x => Math.Max(x.card.FirstFaceValue, x.card.SecondFaceValue)) // Cari kartu dengan nilai tertinggi
             .FirstOrDefault();
 
-        return highestDouble.player;
+        return highestValueCard?.player ?? players.First(); // Jika masih null, pilih pemain pertama dari daftar   
     }
-
-    public void RandomizeTurnOrder(IPlayer currentPlayer)
-    {
-        if (players.Count > 1)
-        {
-            players = players.Where(p => p != currentPlayer).OrderBy(_ => Guid.NewGuid()).ToList();
-            players.Insert(0, currentPlayer);
+    public void RandomizeTurnOrder(IPlayer currentPlayer)    
+    {        
+        if (players.Count > 1)        
+        {            
+            players = players
+            .Where(p => p != currentPlayer)
+            .OrderBy(_ => Guid.NewGuid()).ToList();            
+            players.Insert(0, currentPlayer);        
         }
-
-    }
-    public void NextTurn (Action<IPlayer> onPlayerTurn){
-        if (players.Any())
-        {
-            currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
+    }    
+    public void NextTurn(Action<IPlayer> onPlayerTurn)    
+    {        
+        if (players.Count == 0) return;
+        do        
+        {            
+            currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;            
             currentPlayer = players[currentPlayerIndex];
-            onPlayerTurn(currentPlayer);
-        }
+            var moveOptions = GetPlayableMoves(currentPlayer);            
+            if (moveOptions.Any()) break; // Jika pemain bisa bermain, lanjutkan            
+            Console.WriteLine($"{currentPlayer.Name} tidak bisa bermain, giliran dilewati.");        
+        }         
+        while (true); // Loop sampai ada pemain yang bisa bermain
+        onPlayerTurn(currentPlayer);    
     }
-    public Dictionary<int, (Card,bool canPlaceLeft, bool canPlaceRight)> GetPlayableMoves(IPlayer player)
-    {
-        List<Card> boardCards = board.GetBoard();
-        var moveOptions = new Dictionary<int, (Card,bool,bool)>();
-        if (boardCards.Count == 0)
-        {
-            foreach (var card in hand[player])
-            {
-                moveOptions[card.Id] = (card, true, true);
-            }
-            return moveOptions;
-        }
-        
-        int leftValue = boardCards.First().FirstFaceValue;
+    public Dictionary<int, (Card,bool canPlaceLeft, bool canPlaceRight)> GetPlayableMoves(IPlayer player)    
+    {        
+        List<Card> boardCards = board.GetBoard();        
+        var moveOptions = new Dictionary<int, (Card,bool,bool)>();        
+        if (boardCards.Count == 0)        
+        {           
+            foreach (var card in hand[player])            
+            {                
+                moveOptions[card.Id] = (card, true, true);            
+            }            
+            return moveOptions;        
+        }                
+        int leftValue = boardCards.First().FirstFaceValue;        
         int rightValue = boardCards.Last().SecondFaceValue;
-
-        foreach (Card card in hand[player])
-        {
-            bool canPlaceLeft = (card.FirstFaceValue == leftValue || card.SecondFaceValue == leftValue);
+        foreach (Card card in hand[player])        
+        {            
+            bool canPlaceLeft = (card.FirstFaceValue == leftValue || card.SecondFaceValue == leftValue);            
             bool canPlaceRight = (card.FirstFaceValue == rightValue || card.SecondFaceValue == rightValue);
-            if (canPlaceLeft || canPlaceRight)
-            {
-                moveOptions[card.Id] = (card, canPlaceLeft, canPlaceRight);
-            }
-        }
-        return moveOptions;
-        
-    }
-    
-    public void PlayerTurn(IPlayer player)
-    {
-        var moveOptions = GetPlayableMoves(player);
-
-        if (moveOptions.Count == 0)
-        {
-            Console.WriteLine($"{player.Name} tidak bisa bermain dan harus skip!");
-            return;
-        }
-
-        Card chosenCard;
-        bool placeLeft;
-
-        while (true)
-        {
-            chosenCard = Display.ShowHands(player, hand[player], moveOptions);
-            placeLeft = Display.PlacementSide(); // Pemain memilih kiri atau kanan
-
-            if (IsMoveValid(chosenCard, placeLeft, moveOptions))
-                break;
-
-            Console.WriteLine("Kartu ini tidak bisa diletakkan di posisi yang dipilih! Coba lagi.");
-        }
-
-        // Jika valid, tambahkan ke board
-        // board.UpdateBoard(chosenCard, player, placeLeft);
-        // hand[player].Remove(chosenCard);
+            if (canPlaceLeft || canPlaceRight)            
+            {               
+                moveOptions[card.Id] = (card, canPlaceLeft, canPlaceRight);            
+            }        
+        }        
+        return moveOptions;            
     }
 
-    public bool IsMoveValid(Card card, bool placeLeft, Dictionary<int, (Card card, bool canPlaceLeft, bool canPlaceRight)> moveOptions)
-    {
-        if (!moveOptions.ContainsKey(card.Id)) return false; // Jika kartu tidak ada di moveOptions, berarti tidak bisa dimainkan
-        
-        var (selectedCard, canPlaceLeft, canPlaceRight) = moveOptions[card.Id];
+    public void CheckGameOver(Action<bool> onGameOver)    
+    {        
+        foreach (var player in players)        
+        {            
+            if (hand[player].Count == 0)            
+            {                
+                Console.WriteLine($"{player.Name} memenangkan permainan!");                
+                onGameOver(true);                
+                return;            
+            }        
+        }
+        // Jika semua pemain tidak bisa bergerak, permainan selesai        
+        bool allBlocked = players.All(p => GetPlayableMoves(p).Count == 0);        
+        if (allBlocked)        
+        {            
+            var playerScores = players
+                .Select(p => new 
+                { 
+                    Player = p, 
+                    TotalPoints = hand[p].Sum(card => card.FirstFaceValue + card.SecondFaceValue) 
+                })
+                .OrderBy(p => p.TotalPoints) // Urutkan berdasarkan total nilai terkecil
+                .ToList();
 
-        return placeLeft ? canPlaceLeft : canPlaceRight;
+            // Menentukan pemenang
+            var winner = playerScores.First();
+
+            Console.WriteLine("\n=== Permainan Berakhir: Semua Pemain Terblokir ===");
+            foreach (var entry in playerScores)
+                Console.WriteLine($"{entry.Player.Name}: {entry.TotalPoints} poin");
+            Console.WriteLine($"Pemenang: {winner.Player.Name} dengan {winner.TotalPoints} poin.\n");
+
+            onGameOver(true);        
+        }        
     }
-
-
 }
 
-public static class Display
-{
-    private static int boardCursorTop;
-    public static void ShowBoard(List<Card> playedCards)
-    {
-        for (int i = 0; i < Console.WindowHeight; i++)
-        {
-            Console.SetCursorPosition(0, boardCursorTop + i);
-            Console.Write(new string(' ', Console.WindowWidth));
-        }
-        Console.SetCursorPosition(0, 0);
-        Console.WriteLine("Board saat ini:");
-        Console.WriteLine(string.Join(" ", playedCards));
-    }
-    public static int SetupPlayers()
-    {
-        Console.Write("Masukkan jumlah pemain (2-4): ");
-        int numPlayers;
-        int maxPlayer = 4;
-        while (!int.TryParse(Console.ReadLine(), out numPlayers) || numPlayers < 2 || numPlayers > maxPlayer)
-        {
-            Console.Write("Input tidak valid! Masukkan jumlah pemain antara 2-4: ");
-        }
-        return numPlayers;
-    }
+public interface IDisplay{
 
-    public static string GetPlayerName(int playerNumber)
-    {
-        Console.Write($"Masukkan nama untuk Pemain {playerNumber}: ");
-        return Console.ReadLine();
-    }
+    int boardCursorTop{get;}
+    void ShowBoard(List<Card> IBoard);
+    int SetupPlayers();
+    string AssignPlayersName(int playerNumber);
+    void ShowCurrentPlayer(IPlayer currentPlayer);
+    Card ShowHands(IPlayer player, List<Card> playerHand, Dictionary<int, (Card card, bool canPlaceLeft, bool canPlaceRight)> moveOptions);
+    bool PlacementSide(bool canPlaceLeft, bool canPlaceRight);
+}
+public static class Display{    
+    private static int boardCursorTop;    
+    public static void ShowBoard(List<Card> IBoard)    
+    {        
+        for (int i = 0; i < Console.WindowHeight; i++)        
+        {            
+            Console.SetCursorPosition(0, boardCursorTop + i);            
+            Console.Write(new string(' ', Console.WindowWidth));                    
+        }        
+        Console.Clear();        
+        Console.WriteLine("=== Board Saat Ini ===");
+        if (IBoard.Count == 0)        
+        {                
+            Console.WriteLine("[ Board Kosong ]");            
+            return;         
+        }
+        List<string[]> boardRows = new List<string[]>();
+        foreach (var card in IBoard)        
+        {            
+            string[] cardDisplay;            
+            int first = card.FirstFaceValue;            
+            int second = card.SecondFaceValue;
+            if (first == second) // Kartu double (vertikal)            
+            {                
+                cardDisplay = new string[]                
+                {                    
+                    "┌───┐",                    
+                    $"│ {first} │",                    
+                    $"│ {second} │",                    
+                    "└───┘"                
+                };            
+            }            
+            else // Kartu biasa (horizontal)            
+            {                
+                cardDisplay = new string[]                
+                {                    
+                    "┌───┬───┐",                    
+                    $"│ {first} │ {second} │",                    
+                    "└───┴───┘"                
+                };            
+            }
+            boardRows.Add(cardDisplay);        }
+            // Gabungkan kartu dalam satu tampilan
+        
+            // Hitung total panjang kartu jika ditampilkan semua        
+            int totalWidth = boardRows.Sum(c => c[0].Length + 1); // +1 untuk spasi antar kartu        
+            int consoleWidth = Console.WindowWidth;
 
-    public static void ShowCurrentPlayer(IPlayer currentPlayer)
-    {
-        Console.WriteLine(currentPlayer != null ? $"{currentPlayer.Name} mulai duluan!" : "Tidak ada yang punya kartu double, pilih pemain pertama secara acak.");
+            // Jika terlalu panjang, sembunyikan kartu tengah        
+            bool needShorten = totalWidth > consoleWidth;        
+            int maxRows = boardRows.Max(c => c.Length);
+            for (int row = 0; row < maxRows; row++)        
+            {            
+                for (int i = 0; i < boardRows.Count; i++)            
+                {                
+                    // Tampilkan hanya kartu pertama, terakhir, dan "..." di tengah                
+                    if (needShorten && i > 0 && i < boardRows.Count - 1)                
+                    {                    
+                        if (i == 1) // Cetak "..." hanya sekali                    
+                        {                        
+                            Console.Write("  ...   ");                    
+                        }                    
+                        continue;                
+                    }
+                    string[] card = boardRows[i];
+                // Cetak bagian kartu                
+                    if (row < card.Length)                    
+                        Console.Write(card[row] + " ");                
+                    else                    
+                        Console.Write(new string(' ', card[0].Length) + " ");            
+                }            
+                Console.WriteLine();        
+            }    
+    }    
+    public static int SetupPlayers()    
+    {       
+        Console.Write("Masukkan jumlah pemain (2-4): ");        
+        int numPlayers;        
+        int maxPlayer = 4;        
+        while (!int.TryParse(Console.ReadLine(), out numPlayers) || numPlayers < 2 || numPlayers > maxPlayer)        
+        {            
+            Console.Write("Input tidak valid! Masukkan jumlah pemain antara 2-4: ");        
+        }        
+        return numPlayers;    
     }
-    public static Card ShowHands(IPlayer player, List<Card> playerHand, Dictionary<int, (Card card, bool canPlaceLeft, bool canPlaceRight)> moveOptions)
-    {
-        Console.WriteLine();
-        Console.WriteLine($"{player.Name}, pilih kartu yang akan dimainkan:");
-        for (int i = 0; i < playerHand.Count; i++)
-        {
-            Card card = playerHand[i];
+    public static string AssignPlayersName(int playerNumber)    
+    {        
+        Console.Write($"Masukkan nama untuk Pemain {playerNumber}: ");        
+        return Console.ReadLine();    
+    }
+    public static void ShowCurrentPlayer(IPlayer currentPlayer)    
+    {        
+        Console.WriteLine(currentPlayer != null ? $"{currentPlayer.Name} mulai duluan!" : "Tidak ada yang punya kartu double, pilih pemain pertama secara acak.");    
+    }    
+    public static Card ShowHands(IPlayer player, List<Card> playerHand, Dictionary<int, (Card card, bool canPlaceLeft, bool canPlaceRight)> moveOptions)    
+    {        
+        Console.WriteLine();        
+        Console.WriteLine($"{player.Name}, pilih kartu yang akan dimainkan:");                
+        for (int i = 0; i < playerHand.Count; i++)        
+        {            
+            Card card = playerHand[i];            
             bool isPlayable = moveOptions.ContainsKey(card.Id);
-
-            if (isPlayable)
-                Console.ForegroundColor = ConsoleColor.Green;
-            else
-                Console.ForegroundColor = ConsoleColor.Gray;
-
-            Console.Write($"{i + 1}.{card}  ");
-
-
-        }
-        Console.ResetColor();
+            if (isPlayable)                
+                Console.ForegroundColor = ConsoleColor.Green; // Kartu bisa dimainkan            
+            else                
+                Console.ForegroundColor = ConsoleColor.Red; // Kartu tidak bisa dimainkan
+            Console.Write($"{i + 1}. {card}  ");        
+        }                
+        Console.ResetColor();        
         Console.WriteLine();
-        int choice;
-        while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > playerHand.Count)
-        {
-            Console.WriteLine("Pilihan tidak valid, coba lagi.");
-        }
-
-        return playerHand[choice - 1];
-    }    
-    public static bool PlacementSide(){
-        Console.WriteLine("kiri atau kanan");
-        while(true){
-            string? input=Console.ReadLine();
-            if (input == "kiri") return false;
-            if (input == "kanan") return true;
-        }
-        
+        int choice;        
+        while (true)        
+        {            
+            Console.Write("Pilih nomor kartu: ");            
+            if (int.TryParse(Console.ReadLine(), out choice) && choice >= 1 && choice <= playerHand.Count)            
+            {                
+                Card chosenCard = playerHand[choice - 1];
+                if (moveOptions.ContainsKey(chosenCard.Id)) // Hanya izinkan kartu yang bisa dimainkan                    
+                    return chosenCard;
+                Console.WriteLine("Kartu ini tidak bisa dimainkan! Pilih kartu yang valid.");            
+            }            
+            else            
+            {                
+                Console.WriteLine("Pilihan tidak valid, coba lagi.");            
+            }        
+        }    
+    }     
+    public static bool PlacementSide(bool canPlaceLeft, bool canPlaceRight){        
+        while (true)        
+        {            
+            Console.WriteLine("Pilih sisi untuk meletakkan kartu (kiri/kanan):");
+            string? input = Console.ReadLine()?.ToLower();
+            if (input == "kiri" && canPlaceLeft) return false;            
+            if (input == "kanan" && canPlaceRight) return true;
+            Console.WriteLine("Pilihan tidak valid! Pilih sisi yang sesuai dengan kartu.");        
+        }    
     }
 }
 
-public class Program
-{
-    public static void Main(string[] args)
-    {
-        Deck deck = new Deck();
+public class Program{    
+    public static void Main(string[] args)    
+    {        
+        Deck deck = new Deck();        
         GameController gameController = new GameController(deck);
-
-        
-        int numPlayers = Display.SetupPlayers();
-
-        var players = new List<IPlayer>();
-        for (int i = 1; i <= numPlayers; i++)
-        {
-            string playerName = Display.GetPlayerName(i);
-            players.Add(new Player(i, playerName));
-        }
-
-        gameController.AssignPlayers(players);
-        gameController.DealCards(5);
-
-        var currentPlayer = gameController.DetermineFirstPlayer();
-        Display.ShowCurrentPlayer(currentPlayer);
-        gameController.RandomizeTurnOrder(currentPlayer);
-
-        if (currentPlayer != null)
-        {
-            
-            var playerHand = gameController.GetHands()[currentPlayer];
-            if (playerHand.Any())
-            {
-                Dictionary<int, (Card card, bool canPlaceLeft, bool canPlaceRight)> moveOptions=gameController.GetPlayableMoves(currentPlayer);
-                Card chosenCard = Display.ShowHands(currentPlayer, playerHand,moveOptions);
-                bool posisi= true;
-                gameController.PlayCard(currentPlayer, chosenCard,posisi);
+        gameController.StartGame(() =>        
+        {            
+            int numPlayers = Display.SetupPlayers();            
+            var players = new List<IPlayer>();
+            for (int i = 1; i <= numPlayers; i++)            
+            {                
+                string playerName = Display.AssignPlayersName(i);                
+                players.Add(new Player(i, playerName));            
             }
-        }
-
-        while (true){
-            gameController.NextTurn(player =>
-            {
-                Dictionary<int, (Card card, bool canPlaceLeft, bool canPlaceRight)> moveOptions=gameController.GetPlayableMoves(player);
+            gameController.AssignPlayers(players);            
+            gameController.DealCards(4);
+            var currentPlayer = gameController.DetermineFirstPlayer();            
+            // gameController.SetCurrentPlayer(currentPlayer);
+            Display.ShowCurrentPlayer(currentPlayer);            
+            gameController.RandomizeTurnOrder(currentPlayer);
+            if (currentPlayer != null)            
+            {                
+                var playerHand = gameController.GetHands()[currentPlayer];                
+                if (playerHand.Any())                
+                {                    
+                    var moveOptions = gameController.GetPlayableMoves(currentPlayer);                    
+                    Card chosenCard = Display.ShowHands(currentPlayer, playerHand, moveOptions);                    
+                    bool posisi = true;                    
+                    gameController.PlayCard(currentPlayer, chosenCard, posisi);                
+                }            
+            }
+        });
+        bool gameRunning = true;         
+        while (gameRunning)        
+        {            
+            gameController.NextTurn(player =>            
+            {                
+                var moveOptions = gameController.GetPlayableMoves(player);                
                 var playerHand = gameController.GetHands()[player];
-                if (playerHand.Any())
-                {                  
-                    Card chosenCard = Display.ShowHands(player, playerHand,moveOptions);
-                    bool posisi = Display.PlacementSide();
-                    gameController.PlayerTurn(player);
-                    gameController.PlayCard(player, chosenCard,posisi);
-                }
-
+                if (moveOptions.Any())                
+                {                    
+                    Card chosenCard = Display.ShowHands(player, playerHand, moveOptions);
+                    var (_, canPlaceLeft, canPlaceRight) = moveOptions[chosenCard.Id];
+                    bool posisi = Display.PlacementSide(canPlaceLeft, canPlaceRight);                    
+                    gameController.PlayCard(player, chosenCard, posisi);                
+                }                
+                else                
+                {                    
+                    Console.WriteLine($"{player.Name} tidak memiliki kartu yang bisa dimainkan. Giliran dilewati.");                
+                }                
+                gameController.CheckGameOver((isGameOver) =>                
+                {                    
+                    if (isGameOver)                    
+                    {                        
+                        gameRunning = false; // Keluar dari loop                    
+                    }                
+                });            
             });
-        }
-        
-
-    }
+        }
+    }
 }
 
