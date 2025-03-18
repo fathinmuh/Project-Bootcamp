@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\bin\Debug\net8.0\serialization.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\bin\Debug\net8.0\serialization.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\bin\Debug\net8.0\serialization.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\bin\Debug\net8.0\serialization.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\bin\Debug\net8.0\serialization.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\obj\Debug\net8.0\serialization.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\obj\Debug\net8.0\serialization.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\obj\Debug\net8.0\serialization.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\obj\Debug\net8.0\serialization.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\obj\Debug\net8.0\serialization.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\obj\Debug\net8.0\serialization.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\obj\Debug\net8.0\refint\serialization.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\obj\Debug\net8.0\serialization.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\obj\Debug\net8.0\serialization.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\serialization\obj\Debug\net8.0\ref\serialization.dll

@@ -69,6 +69,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "o and file handling", "stre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stream io and file handling", "stream io and file handling\stream io and file handling.csproj", "{C03590FB-C102-4AEE-A101-845FC4102708}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "serialization", "serialization\serialization.csproj", "{409F9C5C-F3B4-4BA1-B8D8-30FF4A433BEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -206,6 +208,10 @@ Global
 		{C03590FB-C102-4AEE-A101-845FC4102708}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C03590FB-C102-4AEE-A101-845FC4102708}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C03590FB-C102-4AEE-A101-845FC4102708}.Release|Any CPU.Build.0 = Release|Any CPU
+		{409F9C5C-F3B4-4BA1-B8D8-30FF4A433BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{409F9C5C-F3B4-4BA1-B8D8-30FF4A433BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{409F9C5C-F3B4-4BA1-B8D8-30FF4A433BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{409F9C5C-F3B4-4BA1-B8D8-30FF4A433BEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B4BDBE6B-36ED-4CE9-AD3E-A820E9E15DDA} = {F45BFA1D-75D6-4FE3-BF96-3593DE1C6DC6}

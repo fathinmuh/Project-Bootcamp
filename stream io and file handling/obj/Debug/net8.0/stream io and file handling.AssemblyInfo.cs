@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("stream io and file handling")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+823b2031c1a633fc5b49cbe847e701f8fe1993fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c853bccbe51ce6bb69f562690b30cef59b43cd5")]
 [assembly: System.Reflection.AssemblyProductAttribute("stream io and file handling")]
 [assembly: System.Reflection.AssemblyTitleAttribute("stream io and file handling")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
