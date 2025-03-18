@@ -23,8 +23,6 @@ public class GameController{ 
     public void StartGame(Action onGameStart)    
     {        
         onGameStart?.Invoke();    
-
-
     }
 
     public void AssignPlayers(List<IPlayer> playerList)    
@@ -33,9 +31,10 @@ public class GameController{ 
         foreach (var player in players)        
         {            
             hand[player] = new List<Card>();        
-        }    
+        }
+        // onGameStart?.Invoke();    
     }
-    public void DealCards(int cardsPerPlayer)    
+    public void DistributeCards(int cardsPerPlayer)    
     {        
         foreach (var player in players)        
         {            
@@ -87,7 +86,7 @@ public class GameController{ 
 
         var highestValueCard = players
             .SelectMany(p => hand[p], (player, card) => new { player, card })
-            .OrderByDescending(x => Math.Max(x.card.FirstFaceValue, x.card.SecondFaceValue)) // Cari kartu dengan nilai tertinggi
+            .OrderByDescending(x => Math.Max(x.card.FirstFaceValue, x.card.SecondFaceValue))//nilai tertinggi
             .FirstOrDefault();
 
         return highestValueCard?.player;  
@@ -105,18 +104,24 @@ public class GameController{ 
     public void NextTurn(Action<IPlayer> onPlayerTurn)    
     {        
         if (players.Count == 0) return;
+
+        PassTurn();
+        onPlayerTurn(currentPlayer);     
+    }
+    public void PassTurn()    
+    {        
         int startIndex = currentPlayerIndex;
-        do        
-        {            
-            currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;            
+        do        
+        {            
+            currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;            
             currentPlayer = players[currentPlayerIndex];
-            var moveOptions = GetPlayableMoves(currentPlayer);            
-            if (moveOptions.Any()) break; // Jika pemain bisa bermain, lanjutkan            
-            Console.WriteLine($"{currentPlayer.Name} tidak bisa bermain, giliran dilewati.");        
-        }         
-        // while (true); // Loop sampai ada pemain yang bisa bermain
-        while (currentPlayerIndex != startIndex);
-        onPlayerTurn(currentPlayer);    
+            var moveOptions = GetPlayableMoves(currentPlayer);            
+            
+            if (moveOptions.Any()) return;
+
+            Console.WriteLine($"{currentPlayer.Name} tidak bisa bermain, giliran dilewati.");        
+
+        } while (currentPlayerIndex != startIndex);
     }
     public Dictionary<int, (Card,bool canPlaceLeft, bool canPlaceRight)> GetPlayableMoves(IPlayer player)    
     {        

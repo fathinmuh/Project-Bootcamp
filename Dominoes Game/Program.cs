@@ -8,36 +8,44 @@ public class Program{   
         GameController gameController = new GameController(deck);
         IDisplay display = new Display();
 
+        bool gameRunning=false;
+        IPlayer firstPlayer = null;
+
+        int numPlayers = display.SetupPlayers();            
+        var players = new List<IPlayer>();
+        for (int i = 1; i <= numPlayers; i++)            
+        {                
+            string playerName = display.AssignPlayersName(i);                
+            players.Add(new Player(i, playerName));            
+        }
+        gameController.AssignPlayers(players);
+
         gameController.StartGame(() =>        
-        {            
-            int numPlayers = display.SetupPlayers();            
-            var players = new List<IPlayer>();
-            for (int i = 1; i <= numPlayers; i++)            
+        {                        
+            gameController.DistributeCards(2);
+            var firstPlayer = gameController.DetermineFirstPlayer();            
+            display.ShowCurrentPlayer(firstPlayer);            
+            gameController.RandomizeTurnOrder(firstPlayer);
+
+            gameRunning = true;
+            display.ShowBoard(gameController.GetBoardState());
+
+        });
+
+                 
+        while (gameRunning)        
+        {    
+            if (firstPlayer != null)            
             {                
-                string playerName = display.AssignPlayersName(i);                
-                players.Add(new Player(i, playerName));            
-            }
-            gameController.AssignPlayers(players);            
-            gameController.DealCards(5);
-            var currentPlayer = gameController.DetermineFirstPlayer();            
-            display.ShowCurrentPlayer(currentPlayer);            
-            gameController.RandomizeTurnOrder(currentPlayer);
-            if (currentPlayer != null)            
-            {                
-                var playerHand = gameController.GetHandValue()[currentPlayer];                
+                var playerHand = gameController.GetHandValue()[firstPlayer];                
                 if (playerHand.Any())                
                 {                    
-                    var moveOptions = gameController.GetPlayableMoves(currentPlayer);                    
-                    Card chosenCard = display.ShowHand(currentPlayer, playerHand, moveOptions);                    
-                    bool posisi = true;                    
-                    gameController.PlayCard(currentPlayer, chosenCard, posisi);
-                    display.ShowBoard(gameController.GetBoardState());                
+                    var moveOptions = gameController.GetPlayableMoves(firstPlayer);                    
+                    Card chosenCard = display.ShowHand(firstPlayer, playerHand, moveOptions);                    
+                    display.ShowBoard(gameController.GetBoardState());
+                                    
                 }            
-            }
-        });
-        bool gameRunning = true;         
-        while (gameRunning)        
-        {            
+            }        
             gameController.NextTurn(player =>            
             {                
                 var moveOptions = gameController.GetPlayableMoves(player);                
@@ -46,7 +54,7 @@ public class Program{   
                 {                    
                     Card chosenCard = display.ShowHand(player, playerHand, moveOptions);
                     var (_, canPlaceLeft, canPlaceRight) = moveOptions[chosenCard.Id];
-                    bool posisi = display.AssignPlacementSide(canPlaceLeft, canPlaceRight);                    
+                    bool posisi = display.AssignPlacementSide(canPlaceLeft, canPlaceRight);
                     gameController.PlayCard(player, chosenCard, posisi);
                     display.ShowBoard(gameController.GetBoardState());                
                 }                
