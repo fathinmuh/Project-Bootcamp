@@ -1,7 +1,7 @@
 namespace dominoesGame;
 
 public class Display:IDisplay{    
-    public int boardCursorTop {get;set;}    
+    int boardCursorTop;   
     public void ShowBoard(List<Card> board)    
     {        
         for (int i = 0; i < Console.WindowHeight; i++)        
@@ -22,7 +22,7 @@ public class Display:IDisplay{   
             string[] cardDisplay;            
             int first = card.FirstFaceValue;            
             int second = card.SecondFaceValue;
-            if (first == second) // Kartu double (vertikal)            
+            if (first == second) // kartu dobel [3|3]            
             {                
                 cardDisplay = new string[]                
                 {                    
@@ -32,7 +32,7 @@ public class Display:IDisplay{   
                     "└───┘"                
                 };            
             }            
-            else // Kartu biasa (horizontal)            
+            else // kartu biasa [6|1]            
             {                
                 cardDisplay = new string[]                
                 {                    
@@ -103,9 +103,9 @@ public class Display:IDisplay{   
             Card card = playerHand[i];            
             bool isPlayable = moveOptions.ContainsKey(card.Id);
             if (isPlayable)                
-                Console.ForegroundColor = ConsoleColor.Green; // Kartu bisa dimainkan            
+                Console.ForegroundColor = ConsoleColor.Green; // kartu bisa dimainkan            
             else                
-                Console.ForegroundColor = ConsoleColor.White; // Tidak bisa
+                Console.ForegroundColor = ConsoleColor.White; // tidak bisa
             Console.Write($"{i + 1}. {card}  ");        
         }                
         Console.ResetColor();        

@@ -8,9 +8,9 @@ public class GameController{ 
     private Dictionary<int, Card>? moveOptions;    
     private IPlayer? currentPlayer;    
     private int currentPlayerIndex=0;    
-    Action? onGameStart;    
-    Action<IPlayer>? onPlayerTurn;    
-    Action<bool>? onGameOver;
+    public Action? onGameStart;    
+    public Action<IPlayer>? onPlayerTurn;    
+    public Action<bool>? onGameOver;
 
     public GameController(IDeck deck)    
     {        
@@ -32,7 +32,7 @@ public class GameController{ 
         {            
             hand[player] = new List<Card>();        
         }
-        // onGameStart?.Invoke();    
+        // onGameStart?.Invoke();   
     }
     public void DistributeCards(int cardsPerPlayer)    
     {        
@@ -45,7 +45,7 @@ public class GameController{ 
             }        
         }    
     }
-    public void PlayCard(IPlayer player, Card card, bool placeRight)    
+    public void ExecuteMove(IPlayer player, Card card, bool placeRight)    
     {        
         List<Card> boardCards = board.GetBoard();
         if (boardCards.Count > 0)        
@@ -74,7 +74,7 @@ public class GameController{ 
     {        
         return hand;    
     }
-    public IPlayer DetermineFirstPlayer()    
+    public IPlayer? DetermineFirstPlayer()    
     {        
         var highestDouble = players            
             .SelectMany(p => hand[p], (player, card) => new { player, card })            
@@ -86,22 +86,19 @@ public class GameController{ 
 
         var highestValueCard = players
             .SelectMany(p => hand[p], (player, card) => new { player, card })
-            .OrderByDescending(x => Math.Max(x.card.FirstFaceValue, x.card.SecondFaceValue))//nilai tertinggi
+            .OrderByDescending(x => Math.Max(x.card.FirstFaceValue, x.card.SecondFaceValue))
             .FirstOrDefault();
 
         return highestValueCard?.player;  
     }
     public void RandomizeTurnOrder(IPlayer currentPlayer)    
-    {        
-        if (players.Count > 1)        
-        {            
+    {                   
             players = players
             .Where(p => p != currentPlayer)
             .OrderBy(_ => Guid.NewGuid()).ToList();            
             players.Insert(0, currentPlayer);        
-        }
     }    
-    public void NextTurn(Action<IPlayer> onPlayerTurn)    
+    public void NextTurn(Action<IPlayer?> onPlayerTurn)    
     {        
         if (players.Count == 0) return;
 
@@ -116,7 +113,7 @@ public class GameController{ 
             currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;            
             currentPlayer = players[currentPlayerIndex];
             var moveOptions = GetPlayableMoves(currentPlayer);            
-            
+
             if (moveOptions.Any()) return;
 
             Console.WriteLine($"{currentPlayer.Name} tidak bisa bermain, giliran dilewati.");        
@@ -186,9 +183,11 @@ public class GameController{ 
         return playerScores.First().Player;
     }
 
-    public void GameOver(Action<bool> onGameOver)
+    public void GameOver()
     {
-        onGameOver?.Invoke(true);
+        bool isGameOver = CheckGameOver();
+
+        onGameOver?.Invoke(isGameOver);
     }
 
 }

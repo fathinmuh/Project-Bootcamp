@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dominoes Game")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a749cfeaadca46459e6e6f6276dbe4c6675ae2f9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1a49a6eb5d82542e95a91ea097040317dc72f40")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dominoes Game")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dominoes Game")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

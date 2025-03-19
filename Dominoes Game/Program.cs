@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using dominoesGame;
 
 public class Program{    
@@ -20,9 +20,10 @@ public class Program{   
         }
         gameController.AssignPlayers(players);
 
+
         gameController.StartGame(() =>        
         {                        
-            gameController.DistributeCards(2);
+            gameController.DistributeCards(3);
             var firstPlayer = gameController.DetermineFirstPlayer();            
             display.ShowCurrentPlayer(firstPlayer);            
             gameController.RandomizeTurnOrder(firstPlayer);
@@ -55,24 +56,24 @@ public class Program{   
                     Card chosenCard = display.ShowHand(player, playerHand, moveOptions);
                     var (_, canPlaceLeft, canPlaceRight) = moveOptions[chosenCard.Id];
                     bool posisi = display.AssignPlacementSide(canPlaceLeft, canPlaceRight);
-                    gameController.PlayCard(player, chosenCard, posisi);
+                    gameController.ExecuteMove(player, chosenCard, posisi);
                     display.ShowBoard(gameController.GetBoardState());                
-                }                
-                else                
-                {
-                    display.ShowMessage("Tidak ada yang bisa mengeluarkan kartu");                          
-                }            
+                }                          
                 
-                if (gameController.CheckGameOver()){
-                    gameController.GameOver(isGameOver => 
+                gameController.onGameOver = (isGameOver) =>
+                {
+                    if (isGameOver)
                     {
-                        if (isGameOver)
-                        {
-                            IPlayer winner = gameController.GetWinner();
-                            display.ShowMessage($"Pemenang: {winner.Name}\nGameSelesai");
-                            gameRunning=false;
-                        }
-                    });
+                        IPlayer winner = gameController.GetWinner();
+                        display.ShowMessage($"Pemenangnya adalah: {winner.Name} permainan berakhir");
+                        gameRunning=false;
+                    }
+                };
+
+                // Panggil GameOver tanpa parameter
+                if (gameController.CheckGameOver())
+                {
+                    gameController.GameOver();
                 }
            
             });
