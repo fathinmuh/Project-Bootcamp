@@ -42,9 +42,7 @@ public class Display:IDisplay{   
                 };            
             }
             boardRows.Add(cardDisplay);        }
-            // Gabungkan kartu dalam satu tampilan
-        
-            // Hitung total panjang kartu jika ditampilkan semua        
+       
             int totalWidth = boardRows.Sum(c => c[0].Length + 1); // +1 untuk spasi antar kartu        
             int consoleWidth = Console.WindowWidth;
 
@@ -64,8 +62,7 @@ public class Display:IDisplay{   
                         }                    
                         continue;                
                     }
-                    string[] card = boardRows[i];
-                // Cetak bagian kartu                
+                    string[] card = boardRows[i];                
                     if (row < card.Length)                    
                         Console.Write(card[row] + " ");                
                     else                    

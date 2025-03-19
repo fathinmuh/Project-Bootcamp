@@ -2,7 +2,6 @@ namespace dominoesGame;
 
 public interface IDisplay{
 
-    // int boardCursorTop{get;set;}
     void ShowBoard(List<Card> board);
     int SetupPlayers();
     string AssignPlayersName(int playerNumber);

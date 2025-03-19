@@ -28,7 +28,7 @@ public class Deck:IDeck{
     public Card DrawCard()
     {
         if (Cards.Count == 0) throw new InvalidOperationException("Deck kosong!");
-        
+        //benerin jgn throw
         Card drawnCard = Cards[0];
         Cards.RemoveAt(0);
         return drawnCard;

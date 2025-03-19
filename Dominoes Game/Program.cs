@@ -4,7 +4,8 @@ using dominoesGame;
 public class Program{    
     public static void Main(string[] args)    
     {        
-        Deck deck = new Deck();        
+        Deck deck = new Deck();
+        // Board board = new Board();        
         GameController gameController = new GameController(deck);
         IDisplay display = new Display();
 
@@ -65,7 +66,7 @@ public class Program{   
                     if (isGameOver)
                     {
                         IPlayer winner = gameController.GetWinner();
-                        display.ShowMessage($"Pemenangnya adalah: {winner.Name} permainan berakhir");
+                        display.ShowMessage($"Pemenangnya adalah: {winner.Name}\npermainan berakhir");
                         gameRunning=false;
                     }
                 };
