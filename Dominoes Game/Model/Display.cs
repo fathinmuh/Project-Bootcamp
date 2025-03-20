@@ -71,12 +71,12 @@ public class Display:IDisplay{   
                 Console.WriteLine();        
             }    
     }    
-    public int SetupPlayers(int sumCard)    
+    public int SetupPlayers(int distributedCard)    
     {       
         Console.Write("Masukkan jumlah pemain (2-4): ");        
         int numPlayers;        
         int maxPlayer = 4;        
-        while (!int.TryParse(Console.ReadLine(), out numPlayers) || numPlayers < 2 || numPlayers > maxPlayer || numPlayers*sumCard > 28)        
+        while (!int.TryParse(Console.ReadLine(), out numPlayers) || numPlayers < 2 || numPlayers > maxPlayer || numPlayers*distributedCard > 28)        
         {            
             Console.Write("Input tidak valid! Masukkan jumlah pemain antara 2-4: ");        
         }

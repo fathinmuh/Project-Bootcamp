@@ -98,7 +98,7 @@ public class GameController{ 
         players = players
         .Where(p => p != currentPlayer)
         .OrderBy(p => rng.Next()).ToList();
-        // .OrderBy(_ => Guid.NewGuid()).ToList();            
+        // .OrderBy(p => Guid.NewGuid()).ToList();            
         players.Insert(1,currentPlayer);        
     }    
     public void NextTurn(Action<IPlayer?> onPlayerTurn)    
