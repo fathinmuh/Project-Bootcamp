@@ -2,7 +2,8 @@ namespace dominoesGame;
 
 public class GameController{  
     private IDeck deck;    
-    private IBoard board;    
+    private IBoard board;
+    private IDisplay display;   
     private List<IPlayer> players;    
     private Dictionary<IPlayer,List<Card>> hand;    
     private Dictionary<int, Card>? moveOptions;    
@@ -19,6 +20,7 @@ public class GameController{ 
         players = new List<IPlayer>();        
         hand = new Dictionary<IPlayer, List<Card>>();        
         board=new Board(); 
+        display=new Display();
     }    
     public void StartGame(Action onGameStart)    
     {        
@@ -31,8 +33,7 @@ public class GameController{ 
         foreach (var player in players)        
         {            
             hand[player] = new List<Card>();        
-        }
-        // onGameStart?.Invoke();   
+        }   
     }
     public void DistributeCards(int cardsPerPlayer)    
     {        
@@ -40,8 +41,8 @@ public class GameController{ 
         {            
             for (int i = 0; i < cardsPerPlayer; i++)            
             {                
-                if (deck == null) break;                
-                hand[player].Add(deck.DrawCard());            
+                if (deck==null) break;
+                hand[player].Add(deck.DrawCard());             
             }        
         }    
     }
@@ -92,20 +93,33 @@ public class GameController{ 
         return highestValueCard?.player;  
     }
     public void RandomizeTurnOrder(IPlayer currentPlayer)    
-    {                   
-            players = players
-            .Where(p => p != currentPlayer)
-            .OrderBy(_ => Guid.NewGuid()).ToList();            
-            players.Insert(0, currentPlayer);        
+    {       
+        Random rng = new Random();              
+        players = players
+        .Where(p => p != currentPlayer)
+        .OrderBy(p => rng.Next()).ToList();
+        // .OrderBy(_ => Guid.NewGuid()).ToList();
+        if(players.Count == 2)
+            players.Add(currentPlayer);            
+        players.Insert(1,currentPlayer);        
     }    
     public void NextTurn(Action<IPlayer?> onPlayerTurn)    
     {        
         if (players.Count == 0) return;
 
-        PassTurn();
-        onPlayerTurn(currentPlayer);     
+        // PassTurn();
+        // onPlayerTurn(currentPlayer);
+          
+        // if (players.Count == 0) return;
+
+        IPlayer? nextPlayer = PassTurn();
+        
+        if (nextPlayer != null) 
+        {
+            onPlayerTurn(nextPlayer);
+        }   
     }
-    public void PassTurn()    
+    public IPlayer? PassTurn()    
     {        
         int startIndex = currentPlayerIndex;
         do        
@@ -114,11 +128,12 @@ public class GameController{ 
             currentPlayer = players[currentPlayerIndex];
             var moveOptions = GetPlayableMoves(currentPlayer);            
 
-            if (moveOptions.Any()) return;
+            if (moveOptions.Any()) return currentPlayer;
 
-            Console.WriteLine($"{currentPlayer.Name} tidak bisa bermain, giliran dilewati.");        
+            display.ShowMessage($"{currentPlayer.Name} tidak bisa bermain, giliran dilewati.");        
 
         } while (currentPlayerIndex != startIndex);
+        return null;
     }
     public Dictionary<int, (Card,bool canPlaceLeft, bool canPlaceRight)> GetPlayableMoves(IPlayer player)    
     {        

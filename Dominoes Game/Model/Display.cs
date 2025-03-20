@@ -71,15 +71,15 @@ public class Display:IDisplay{   
                 Console.WriteLine();        
             }    
     }    
-    public int SetupPlayers()    
+    public int SetupPlayers(int sumCard)    
     {       
         Console.Write("Masukkan jumlah pemain (2-4): ");        
         int numPlayers;        
         int maxPlayer = 4;        
-        while (!int.TryParse(Console.ReadLine(), out numPlayers) || numPlayers < 2 || numPlayers > maxPlayer)        
+        while (!int.TryParse(Console.ReadLine(), out numPlayers) || numPlayers < 2 || numPlayers > maxPlayer || numPlayers*sumCard > 28)        
         {            
             Console.Write("Input tidak valid! Masukkan jumlah pemain antara 2-4: ");        
-        }        
+        }
         return numPlayers;    
     }
     public string AssignPlayersName(int playerNumber)    
@@ -87,10 +87,6 @@ public class Display:IDisplay{   
         Console.Write($"Masukkan nama untuk Pemain {playerNumber}: ");        
         return Console.ReadLine();    
     }
-    public void ShowCurrentPlayer(IPlayer currentPlayer)    
-    {        
-        Console.WriteLine(currentPlayer != null ? $"{currentPlayer.Name} mulai duluan!" : "Tidak ada yang punya kartu double, pilih pemain pertama secara acak.");    
-    }    
     public Card ShowHand(IPlayer player, List<Card> playerHand, Dictionary<int, (Card card, bool canPlaceLeft, bool canPlaceRight)> moveOptions)    
     {        
         Console.WriteLine();        

@@ -11,8 +11,9 @@ public class Program{   
 
         bool gameRunning=false;
         IPlayer firstPlayer = null;
+        int distributedCard = 3;
 
-        int numPlayers = display.SetupPlayers();            
+        int numPlayers = display.SetupPlayers(distributedCard);            
         var players = new List<IPlayer>();
         for (int i = 1; i <= numPlayers; i++)            
         {                
@@ -24,30 +25,17 @@ public class Program{   
 
         gameController.StartGame(() =>        
         {                        
-            gameController.DistributeCards(3);
+            gameController.DistributeCards(distributedCard);
             var firstPlayer = gameController.DetermineFirstPlayer();            
-            display.ShowCurrentPlayer(firstPlayer);            
             gameController.RandomizeTurnOrder(firstPlayer);
 
-            gameRunning = true;
             display.ShowBoard(gameController.GetBoardState());
-
+            display.ShowMessage($"{firstPlayer.Name} mulai duluan!");
+            gameRunning = true; 
         });
-
                  
         while (gameRunning)        
         {    
-            if (firstPlayer != null)            
-            {                
-                var playerHand = gameController.GetHandValue()[firstPlayer];                
-                if (playerHand.Any())                
-                {                    
-                    var moveOptions = gameController.GetPlayableMoves(firstPlayer);                    
-                    Card chosenCard = display.ShowHand(firstPlayer, playerHand, moveOptions);                    
-                    display.ShowBoard(gameController.GetBoardState());
-                                    
-                }            
-            }        
             gameController.NextTurn(player =>            
             {                
                 var moveOptions = gameController.GetPlayableMoves(player);                
@@ -59,25 +47,22 @@ public class Program{   
                     bool posisi = display.AssignPlacementSide(canPlaceLeft, canPlaceRight);
                     gameController.ExecuteMove(player, chosenCard, posisi);
                     display.ShowBoard(gameController.GetBoardState());                
-                }                          
-                
-                gameController.onGameOver = (isGameOver) =>
-                {
-                    if (isGameOver)
-                    {
-                        IPlayer winner = gameController.GetWinner();
-                        display.ShowMessage($"Pemenangnya adalah: {winner.Name}\npermainan berakhir");
-                        gameRunning=false;
-                    }
-                };
-
-                // Panggil GameOver tanpa parameter
-                if (gameController.CheckGameOver())
-                {
-                    gameController.GameOver();
                 }
-           
             });
+            gameController.onGameOver = (isGameOver) =>
+            {
+                if (isGameOver)
+                {
+                    IPlayer winner = gameController.GetWinner();
+                    display.ShowMessage($"Pemenangnya adalah: {winner.Name}\npermainan berakhir");
+                    gameRunning=false;
+                }
+            };
+
+            if (gameController.CheckGameOver())
+            {
+                gameController.GameOver();
+            }
         }
     }
 }

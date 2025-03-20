@@ -1,6 +1,7 @@
 namespace dominoesGame;
 
 public class Deck:IDeck{
+    private IDisplay display;
     public List<Card> Cards { get; private set; }
     public Deck()
     {
@@ -14,6 +15,8 @@ public class Deck:IDeck{
                 Cards.Add(new Card(id++, i, j));
             }
         }
+        display = new Display();
+        
     }
 
     public void Shuffle(){
@@ -27,10 +30,13 @@ public class Deck:IDeck{
     }
     public Card DrawCard()
     {
-        if (Cards.Count == 0) throw new InvalidOperationException("Deck kosong!");
-        //benerin jgn throw
+        if (Cards.Count == 0) {
+           display.ShowMessage("deck kosong");
+        }   
+  
         Card drawnCard = Cards[0];
         Cards.RemoveAt(0);
         return drawnCard;
+        
     }
 }
