@@ -11,7 +11,7 @@ public class Program{   
 
         bool gameRunning=false;
         IPlayer firstPlayer = null;
-        int distributedCard = 3;
+        int distributedCard = 15;
 
         int numPlayers = display.SetupPlayers(distributedCard);            
         var players = new List<IPlayer>();

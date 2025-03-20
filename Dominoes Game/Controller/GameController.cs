@@ -107,11 +107,6 @@ public class GameController{ 
     {        
         if (players.Count == 0) return;
 
-        // PassTurn();
-        // onPlayerTurn(currentPlayer);
-          
-        // if (players.Count == 0) return;
-
         IPlayer? nextPlayer = PassTurn();
         
         if (nextPlayer != null) 

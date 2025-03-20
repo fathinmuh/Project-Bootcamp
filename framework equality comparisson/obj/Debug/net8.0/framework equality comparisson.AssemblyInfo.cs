@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("framework equality comparisson")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca04079395a989e2a8a48cef6e6439d797cdf3cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27cad9ef4ba393dafdd8f9a1f66afb71b17d7bb7")]
 [assembly: System.Reflection.AssemblyProductAttribute("framework equality comparisson")]
 [assembly: System.Reflection.AssemblyTitleAttribute("framework equality comparisson")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
