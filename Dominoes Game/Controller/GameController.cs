@@ -98,23 +98,17 @@ public class GameController{ 
         players = players
         .Where(p => p != currentPlayer)
         .OrderBy(p => rng.Next()).ToList();
-        // .OrderBy(_ => Guid.NewGuid()).ToList();
-        if(players.Count == 2)
-            players.Add(currentPlayer);            
+        // .OrderBy(_ => Guid.NewGuid()).ToList();            
         players.Insert(1,currentPlayer);        
     }    
     public void NextTurn(Action<IPlayer?> onPlayerTurn)    
     {        
         if (players.Count == 0) return;
 
-        IPlayer? nextPlayer = PassTurn();
-        
-        if (nextPlayer != null) 
-        {
-            onPlayerTurn(nextPlayer);
-        }   
+        PassTurn();
+        onPlayerTurn(currentPlayer);
     }
-    public IPlayer? PassTurn()    
+    public void PassTurn()    
     {        
         int startIndex = currentPlayerIndex;
         do        
@@ -123,12 +117,12 @@ public class GameController{ 
             currentPlayer = players[currentPlayerIndex];
             var moveOptions = GetPlayableMoves(currentPlayer);            
 
-            if (moveOptions.Any()) return currentPlayer;
+            if (moveOptions.Any()) return;
 
             display.ShowMessage($"{currentPlayer.Name} tidak bisa bermain, giliran dilewati.");        
 
         } while (currentPlayerIndex != startIndex);
-        return null;
+        // return null;
     }
     public Dictionary<int, (Card,bool canPlaceLeft, bool canPlaceRight)> GetPlayableMoves(IPlayer player)    
     {        
