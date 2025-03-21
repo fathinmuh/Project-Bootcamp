@@ -13,3 +13,18 @@ C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\refint\foob
 C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.pdb
 C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.genruntimeconfig.cache
 C:\Users\Batch 12\Documents\Project-Bootcamp\foobaz\obj\Debug\net8.0\ref\foobaz.dll
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\bin\Debug\net8.0\foobaz.exe
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\bin\Debug\net8.0\foobaz.deps.json
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\bin\Debug\net8.0\foobaz.runtimeconfig.json
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\bin\Debug\net8.0\foobaz.dll
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\bin\Debug\net8.0\foobaz.pdb
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.GeneratedMSBuildEditorConfig.editorconfig
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.AssemblyInfoInputs.cache
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.AssemblyInfo.cs
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.csproj.CoreCompileInputs.cache
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.sourcelink.json
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.dll
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\obj\Debug\net8.0\refint\foobaz.dll
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.pdb
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\obj\Debug\net8.0\foobaz.genruntimeconfig.cache
+E:\Questionnaire - Bootcamp Formulatrix_files\Project-Bootcamp\foobaz\obj\Debug\net8.0\ref\foobaz.dll

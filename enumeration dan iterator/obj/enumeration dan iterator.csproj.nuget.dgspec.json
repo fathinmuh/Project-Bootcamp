@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\enumeration dan iterator\\enumeration dan iterator.csproj": {}
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\enumeration dan iterator\\enumeration dan iterator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\enumeration dan iterator\\enumeration dan iterator.csproj": {
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\enumeration dan iterator\\enumeration dan iterator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\enumeration dan iterator\\enumeration dan iterator.csproj",
+        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\enumeration dan iterator\\enumeration dan iterator.csproj",
         "projectName": "enumeration dan iterator",
-        "projectPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\enumeration dan iterator\\enumeration dan iterator.csproj",
-        "packagesPath": "C:\\Users\\Batch 12\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\enumeration dan iterator\\obj\\",
+        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\enumeration dan iterator\\enumeration dan iterator.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\enumeration dan iterator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Batch 12\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

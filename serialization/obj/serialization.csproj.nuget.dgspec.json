@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\serialization\\serialization.csproj": {}
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\serialization\\serialization.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\serialization\\serialization.csproj": {
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\serialization\\serialization.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\serialization\\serialization.csproj",
+        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\serialization\\serialization.csproj",
         "projectName": "serialization",
-        "projectPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\serialization\\serialization.csproj",
-        "packagesPath": "C:\\Users\\Batch 12\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\serialization\\obj\\",
+        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\serialization\\serialization.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\serialization\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Batch 12\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

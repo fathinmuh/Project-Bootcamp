@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\framework formatting and parsing\\framework formatting and parsing.csproj": {}
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework formatting and parsing\\framework formatting and parsing.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\framework formatting and parsing\\framework formatting and parsing.csproj": {
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework formatting and parsing\\framework formatting and parsing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\framework formatting and parsing\\framework formatting and parsing.csproj",
+        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework formatting and parsing\\framework formatting and parsing.csproj",
         "projectName": "framework formatting and parsing",
-        "projectPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\framework formatting and parsing\\framework formatting and parsing.csproj",
-        "packagesPath": "C:\\Users\\Batch 12\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\framework formatting and parsing\\obj\\",
+        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework formatting and parsing\\framework formatting and parsing.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework formatting and parsing\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Batch 12\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Batch 12\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\operator overloading\\operator overloading.csproj",
+      "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\operator overloading\\operator overloading.csproj",
       "projectName": "operator overloading",
-      "projectPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\operator overloading\\operator overloading.csproj",
-      "packagesPath": "C:\\Users\\Batch 12\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\operator overloading\\obj\\",
+      "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\operator overloading\\operator overloading.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\operator overloading\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Batch 12\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
