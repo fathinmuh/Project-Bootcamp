@@ -35,16 +35,17 @@ public class GameController{ 
             hand[player] = new List<Card>();        
         }   
     }
-    public void DistributeCards(int cardsPerPlayer)    
+    public bool DistributeCards(int cardsPerPlayer)    
     {        
         foreach (var player in players)        
         {            
             for (int i = 0; i < cardsPerPlayer; i++)            
             {                
-                if (deck==null) break;
+//                 if (deck==null) break;
                 hand[player].Add(deck.DrawCard());             
             }        
         }    
+        return true;
     }
     public void ExecuteMove(IPlayer player, Card card, bool placeRight)    
     {        

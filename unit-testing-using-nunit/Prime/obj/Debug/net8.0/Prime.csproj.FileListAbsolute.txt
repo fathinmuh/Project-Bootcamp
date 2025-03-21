@@ -1,0 +1,15 @@
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\obj\Debug\net8.0\Prime.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\obj\Debug\net8.0\Prime.AssemblyInfoInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\obj\Debug\net8.0\Prime.AssemblyInfo.cs
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\obj\Debug\net8.0\Prime.csproj.CoreCompileInputs.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\obj\Debug\net8.0\Prime.sourcelink.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\bin\Debug\net8.0\Prime.exe
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\bin\Debug\net8.0\Prime.deps.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\bin\Debug\net8.0\Prime.runtimeconfig.json
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\bin\Debug\net8.0\Prime.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\bin\Debug\net8.0\Prime.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\obj\Debug\net8.0\Prime.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\obj\Debug\net8.0\refint\Prime.dll
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\obj\Debug\net8.0\Prime.pdb
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\obj\Debug\net8.0\Prime.genruntimeconfig.cache
+C:\Users\Batch 12\Documents\Project-Bootcamp\unit-testing-using-nunit\Prime\obj\Debug\net8.0\ref\Prime.dll

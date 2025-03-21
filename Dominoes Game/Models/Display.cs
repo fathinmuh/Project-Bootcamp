@@ -76,11 +76,11 @@ public class Display:IDisplay{   
         Console.Write("Masukkan jumlah pemain (2-4): ");        
         int numPlayers;        
         int maxPlayer = 4;        
-        while (!int.TryParse(Console.ReadLine(), out numPlayers) || numPlayers < 2 || numPlayers > maxPlayer || numPlayers*distributedCard > 28)        
-        {            
-            Console.Write("Input tidak valid! Masukkan jumlah pemain antara 2-4: ");        
-        }
-        return numPlayers;    
+        // while (!int.TryParse(Console.ReadLine(), out numPlayers) || numPlayers < 2 || numPlayers > maxPlayer || numPlayers*distributedCard > 28)        
+        // {            
+        //     Console.Write("Input tidak valid! Masukkan jumlah pemain antara 2-4: ");        
+        // }
+        return distributedCard;    
     }
     public string AssignPlayersName(int playerNumber)    
     {        

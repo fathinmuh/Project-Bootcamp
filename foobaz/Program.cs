@@ -39,25 +39,25 @@ public class Kelipatan{
     }
 }
 
-class Program{
-    static void Main(){
-        PrintNumber printNumber = new();
-        Kelipatan kelipatan = new ();
+// class Program{
+//     static void Main(){
+//         PrintNumber printNumber = new();
+//         Kelipatan kelipatan = new ();
 
-        string n = Console.ReadLine();
-        int x= int.Parse(n);
+//         string n = Console.ReadLine();
+//         int x= int.Parse(n);
 
-        printNumber.Fbj += kelipatan.Tiga;
-        printNumber.Fbj += kelipatan.Lima;
-        printNumber.Fbj += kelipatan.Tujuh;
-        printNumber.Fbj += kelipatan.Sembilan;
-        printNumber.Fbj += kelipatan.Spasi;
+//         printNumber.Fbj += kelipatan.Tiga;
+//         printNumber.Fbj += kelipatan.Lima;
+//         printNumber.Fbj += kelipatan.Tujuh;
+//         printNumber.Fbj += kelipatan.Sembilan;
+//         printNumber.Fbj += kelipatan.Spasi;
 
-        foreach (int fib in printNumber.Fibs(x)){
-            Console.Write(fib + " ");
-        }
-    }
-}
+//         foreach (int fib in printNumber.Fibs(x)){
+//             Console.Write(fib + " ");
+//         }
+//     }
+// }
 
 
 
