@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\trycatch\\trycatch.csproj",
+      "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\trycatch\\trycatch.csproj",
       "projectName": "trycatch",
-      "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\trycatch\\trycatch.csproj",
+      "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\trycatch\\trycatch.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\trycatch\\obj\\",
+      "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\trycatch\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

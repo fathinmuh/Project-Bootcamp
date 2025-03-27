@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\enumeration dan iterator\\enumeration dan iterator.csproj",
+      "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\enumeration dan iterator\\enumeration dan iterator.csproj",
       "projectName": "enumeration dan iterator",
-      "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\enumeration dan iterator\\enumeration dan iterator.csproj",
+      "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\enumeration dan iterator\\enumeration dan iterator.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\enumeration dan iterator\\obj\\",
+      "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\enumeration dan iterator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

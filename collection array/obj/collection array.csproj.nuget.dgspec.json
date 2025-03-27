@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\collection array\\collection array.csproj": {}
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\collection array\\collection array.csproj": {}
   },
   "projects": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\collection array\\collection array.csproj": {
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\collection array\\collection array.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\collection array\\collection array.csproj",
+        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\collection array\\collection array.csproj",
         "projectName": "collection array",
-        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\collection array\\collection array.csproj",
+        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\collection array\\collection array.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\collection array\\obj\\",
+        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\collection array\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

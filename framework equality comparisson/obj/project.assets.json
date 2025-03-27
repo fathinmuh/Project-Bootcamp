@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework equality comparisson\\framework equality comparisson.csproj",
+      "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\framework equality comparisson\\framework equality comparisson.csproj",
       "projectName": "framework equality comparisson",
-      "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework equality comparisson\\framework equality comparisson.csproj",
+      "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\framework equality comparisson\\framework equality comparisson.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework equality comparisson\\obj\\",
+      "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\framework equality comparisson\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

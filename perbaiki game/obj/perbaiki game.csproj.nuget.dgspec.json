@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\perbaiki game\\perbaiki game.csproj": {}
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\perbaiki game\\perbaiki game.csproj": {}
   },
   "projects": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\perbaiki game\\perbaiki game.csproj": {
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\perbaiki game\\perbaiki game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\perbaiki game\\perbaiki game.csproj",
+        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\perbaiki game\\perbaiki game.csproj",
         "projectName": "perbaiki game",
-        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\perbaiki game\\perbaiki game.csproj",
+        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\perbaiki game\\perbaiki game.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\perbaiki game\\obj\\",
+        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\perbaiki game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

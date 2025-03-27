@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework utility\\framework utility.csproj": {}
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\framework utility\\framework utility.csproj": {}
   },
   "projects": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework utility\\framework utility.csproj": {
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\framework utility\\framework utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework utility\\framework utility.csproj",
+        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\framework utility\\framework utility.csproj",
         "projectName": "framework utility",
-        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework utility\\framework utility.csproj",
+        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\framework utility\\framework utility.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework utility\\obj\\",
+        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\framework utility\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

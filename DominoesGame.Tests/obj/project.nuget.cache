@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aBAjhq4XtDg=",
+  "dgSpecHash": "FvB2IWpAruU=",
   "success": true,
-  "projectFilePath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\DominoesGame.Tests\\DominoesGame.Tests.csproj",
+  "projectFilePath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\DominoesGame.Tests\\DominoesGame.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",

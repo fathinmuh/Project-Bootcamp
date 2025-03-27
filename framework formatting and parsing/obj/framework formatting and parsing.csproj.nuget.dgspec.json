@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework formatting and parsing\\framework formatting and parsing.csproj": {}
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\framework formatting and parsing\\framework formatting and parsing.csproj": {}
   },
   "projects": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework formatting and parsing\\framework formatting and parsing.csproj": {
+    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\framework formatting and parsing\\framework formatting and parsing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework formatting and parsing\\framework formatting and parsing.csproj",
+        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\framework formatting and parsing\\framework formatting and parsing.csproj",
         "projectName": "framework formatting and parsing",
-        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework formatting and parsing\\framework formatting and parsing.csproj",
+        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\framework formatting and parsing\\framework formatting and parsing.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp\\framework formatting and parsing\\obj\\",
+        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\framework formatting and parsing\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -21,9 +21,10 @@ namespace AspNetCoreTodo.Repository
             return await _context.Items.ToListAsync(); // Fetch all employees from the database
         }
 
-        public async Task<TodoItem> GetByIdAsync(int Id)
+        public async Task<TodoItem?> GetByIdAsync(Guid id, string userId)
         {
-            return await _context.Items.FindAsync(Id); // Fetch a specific employee by ID
+            return await _context.TodoItems
+                .FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task InsertAsync(TodoItem todoItem)
@@ -31,13 +32,10 @@ namespace AspNetCoreTodo.Repository
             await _context.Items.AddAsync(todoItem); // Add a new employee
         }
 
-        public async Task DeleteAsync(int Id)
+        public async Task DeleteAsync(TodoItem item)
         {
-            var todoItem = await _context.Items.FindAsync(Id);
-            if (todoItem != null)
-            {
-                _context.Items.Remove(todoItem); // Remove employee from the database
-            }
+            _context.TodoItems.Remove(item);
+            await Task.CompletedTask;
         }
 
         public async Task<int> SaveAsync()

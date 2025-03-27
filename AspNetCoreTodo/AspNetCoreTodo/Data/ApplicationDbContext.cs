@@ -12,6 +12,7 @@ public class ApplicationDbContext : IdentityDbContext
     }
 
     public DbSet<TodoItem> Items { get; set; }
+    public DbSet<TodoItem> TodoItems { get; set; }
 
 
 }
