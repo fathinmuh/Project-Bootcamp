@@ -20,7 +20,7 @@ namespace AspNetCoreTodo.Controllers
             _todoItemService = todoItemService;
             _userManager = userManager;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(TodoItem newitem)
         {
             var currentUser = await _userManager.GetUserAsync(User);
             if (currentUser == null) return Challenge();
@@ -32,12 +32,14 @@ namespace AspNetCoreTodo.Controllers
             };
             return View(model);
         }
+
+      
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddItem(TodoItem newItem)
+        public async Task<IActionResult> AddItem(TodoItem newItem )
         {
             if (!ModelState.IsValid)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", newItem);
             }
 
             var currentUser = await _userManager.GetUserAsync(User);

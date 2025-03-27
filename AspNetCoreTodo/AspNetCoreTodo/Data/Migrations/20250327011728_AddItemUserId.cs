@@ -14,8 +14,7 @@ namespace AspNetCoreTodo.Data.Migrations
                 name: "UserId",
                 table: "Items",
                 type: "TEXT",
-                nullable: false,
-                defaultValue: "");
+                nullable: true);
         }
 
         /// <inheritdoc />

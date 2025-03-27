@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AspNetCoreTodo.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250326075700_AddItemUserId")]
+    [Migration("20250327011728_AddItemUserId")]
     partial class AddItemUserId
     {
         /// <inheritdoc />
@@ -37,7 +37,6 @@ namespace AspNetCoreTodo.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
