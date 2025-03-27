@@ -3,8 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using AspNetCoreTodo.Data;
 using AspNetCoreTodo.Services;
 using AspNetCoreTodo.Models;
+using AspNetCoreTodo.Repository;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,9 +25,13 @@ builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
 //Registering Model and Validator to show the error message on client side
 builder.Services.AddTransient<IValidator<TodoItem>, TodoItemValidator>();
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
+
+
 
 // Menambahkan MVC
 builder.Services.AddMvc();
+builder.Services.AddScoped<ITodoItemRepository, TodoItemRepository>();
 
 builder.Services.AddScoped<ITodoItemService, TodoItemService>();
 

@@ -385,3 +385,5 @@ C:\Users\Batch 12\Documents\Project-Bootcamp\AspNetCoreTodo\AspNetCoreTodo\obj\D
 c:\Users\Batch 12\Documents\Project-Bootcamp\AspNetCoreTodo\AspNetCoreTodo\bin\Debug\net8.0\FluentValidation.dll
 c:\Users\Batch 12\Documents\Project-Bootcamp\AspNetCoreTodo\AspNetCoreTodo\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 c:\Users\Batch 12\Documents\Project-Bootcamp\AspNetCoreTodo\AspNetCoreTodo\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+c:\Users\Batch 12\Documents\Project-Bootcamp\AspNetCoreTodo\AspNetCoreTodo\bin\Debug\net8.0\AutoMapper.dll
+c:\Users\Batch 12\Documents\Project-Bootcamp\AspNetCoreTodo\AspNetCoreTodo\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
