@@ -7,6 +7,7 @@ using AspNetCoreTodo.Repository;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using AutoMapper;
+using AspNetCoreTodo.DTO;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,7 @@ builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
 //Registering Model and Validator to show the error message on client side
 builder.Services.AddTransient<IValidator<TodoItem>, TodoItemValidator>();
+builder.Services.AddTransient<IValidator<TodoItemDTO>, TodoItemDTOValidator>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 
