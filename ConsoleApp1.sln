@@ -83,6 +83,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design pattern singleton th
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "singleton not safe", "singleton not safe\singleton not safe.csproj", "{CFFB4107-6CDD-4013-B025-3F5A653D85AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "singletonthread", "singletonthread\singletonthread.csproj", "{2D010936-6357-475F-9296-BB2DCDA704D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design pattern example", "Design pattern example\Design pattern example.csproj", "{80609638-D4C1-469F-8F01-A29094341716}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design pattern example not use", "Design pattern example not use\Design pattern example not use.csproj", "{8D75B5C5-9E0F-4C9B-B3C3-B19226DC2B48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -248,6 +254,18 @@ Global
 		{CFFB4107-6CDD-4013-B025-3F5A653D85AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFFB4107-6CDD-4013-B025-3F5A653D85AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFFB4107-6CDD-4013-B025-3F5A653D85AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D010936-6357-475F-9296-BB2DCDA704D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D010936-6357-475F-9296-BB2DCDA704D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D010936-6357-475F-9296-BB2DCDA704D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D010936-6357-475F-9296-BB2DCDA704D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80609638-D4C1-469F-8F01-A29094341716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80609638-D4C1-469F-8F01-A29094341716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80609638-D4C1-469F-8F01-A29094341716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80609638-D4C1-469F-8F01-A29094341716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D75B5C5-9E0F-4C9B-B3C3-B19226DC2B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D75B5C5-9E0F-4C9B-B3C3-B19226DC2B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D75B5C5-9E0F-4C9B-B3C3-B19226DC2B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D75B5C5-9E0F-4C9B-B3C3-B19226DC2B48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B4BDBE6B-36ED-4CE9-AD3E-A820E9E15DDA} = {F45BFA1D-75D6-4FE3-BF96-3593DE1C6DC6}
