@@ -998,19 +998,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\Batch 12\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\DominoesGame.Tests\\DominoesGame.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\DominoesGame.Tests\\DominoesGame.Tests.csproj",
       "projectName": "DominoesGame.Tests",
-      "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\DominoesGame.Tests\\DominoesGame.Tests.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\DominoesGame.Tests\\obj\\",
+      "projectPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\DominoesGame.Tests\\DominoesGame.Tests.csproj",
+      "packagesPath": "C:\\Users\\Batch 12\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\DominoesGame.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Batch 12\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1022,8 +1022,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\Dominoes Game\\Dominoes Game.csproj": {
-              "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\Dominoes Game\\Dominoes Game.csproj"
+            "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\Dominoes Game\\Dominoes Game.csproj": {
+              "projectPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\Dominoes Game\\Dominoes Game.csproj"
             }
           }
         }

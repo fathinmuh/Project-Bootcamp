@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\delegates\\delegates.csproj": {}
+    "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\delegates\\delegates.csproj": {}
   },
   "projects": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\delegates\\delegates.csproj": {
+    "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\delegates\\delegates.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\delegates\\delegates.csproj",
+        "projectUniqueName": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\delegates\\delegates.csproj",
         "projectName": "delegates",
-        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\delegates\\delegates.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\delegates\\obj\\",
+        "projectPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\delegates\\delegates.csproj",
+        "packagesPath": "C:\\Users\\Batch 12\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\delegates\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Batch 12\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

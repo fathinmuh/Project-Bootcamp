@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\collection list queue stack\\collection list queue stack.csproj": {}
+    "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\collection list queue stack\\collection list queue stack.csproj": {}
   },
   "projects": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\collection list queue stack\\collection list queue stack.csproj": {
+    "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\collection list queue stack\\collection list queue stack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\collection list queue stack\\collection list queue stack.csproj",
+        "projectUniqueName": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\collection list queue stack\\collection list queue stack.csproj",
         "projectName": "collection list queue stack",
-        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\collection list queue stack\\collection list queue stack.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\collection list queue stack\\obj\\",
+        "projectPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\collection list queue stack\\collection list queue stack.csproj",
+        "packagesPath": "C:\\Users\\Batch 12\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\collection list queue stack\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Batch 12\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

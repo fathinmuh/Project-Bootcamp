@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\Batch 12\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\day 4 interface\\day 4 interface.csproj",
+      "projectUniqueName": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\day 4 interface\\day 4 interface.csproj",
       "projectName": "day 4 interface",
-      "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\day 4 interface\\day 4 interface.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\day 4 interface\\obj\\",
+      "projectPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\day 4 interface\\day 4 interface.csproj",
+      "packagesPath": "C:\\Users\\Batch 12\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\day 4 interface\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Batch 12\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

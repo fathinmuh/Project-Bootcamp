@@ -75,6 +75,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello World in c#", "Hello 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DominoesGame.Tests", "DominoesGame.Tests\DominoesGame.Tests.csproj", "{F62D048E-AAC9-4643-91B0-90B55F04220A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Singleton.csproj", "{2EB69E7F-324B-45E6-923C-B2A1348C9099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design pattern singleton", "Design pattern singleton\Design pattern singleton.csproj", "{EA0E47DF-0A94-41A6-9569-C4B77DDA0F21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design pattern singleton thread-safe", "Design pattern singleton thread-safe\Design pattern singleton thread-safe.csproj", "{9DDE2B88-6F78-4C35-8BD5-69566C0A6B00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "singleton not safe", "singleton not safe\singleton not safe.csproj", "{CFFB4107-6CDD-4013-B025-3F5A653D85AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -224,6 +232,22 @@ Global
 		{F62D048E-AAC9-4643-91B0-90B55F04220A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F62D048E-AAC9-4643-91B0-90B55F04220A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F62D048E-AAC9-4643-91B0-90B55F04220A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EB69E7F-324B-45E6-923C-B2A1348C9099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EB69E7F-324B-45E6-923C-B2A1348C9099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EB69E7F-324B-45E6-923C-B2A1348C9099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EB69E7F-324B-45E6-923C-B2A1348C9099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA0E47DF-0A94-41A6-9569-C4B77DDA0F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA0E47DF-0A94-41A6-9569-C4B77DDA0F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA0E47DF-0A94-41A6-9569-C4B77DDA0F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA0E47DF-0A94-41A6-9569-C4B77DDA0F21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DDE2B88-6F78-4C35-8BD5-69566C0A6B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DDE2B88-6F78-4C35-8BD5-69566C0A6B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DDE2B88-6F78-4C35-8BD5-69566C0A6B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DDE2B88-6F78-4C35-8BD5-69566C0A6B00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFFB4107-6CDD-4013-B025-3F5A653D85AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFFB4107-6CDD-4013-B025-3F5A653D85AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFFB4107-6CDD-4013-B025-3F5A653D85AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFFB4107-6CDD-4013-B025-3F5A653D85AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B4BDBE6B-36ED-4CE9-AD3E-A820E9E15DDA} = {F45BFA1D-75D6-4FE3-BF96-3593DE1C6DC6}

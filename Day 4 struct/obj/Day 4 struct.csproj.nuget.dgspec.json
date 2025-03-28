@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\Day 4 struct\\Day 4 struct.csproj": {}
+    "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\Day 4 struct\\Day 4 struct.csproj": {}
   },
   "projects": {
-    "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\Day 4 struct\\Day 4 struct.csproj": {
+    "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\Day 4 struct\\Day 4 struct.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\Day 4 struct\\Day 4 struct.csproj",
+        "projectUniqueName": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\Day 4 struct\\Day 4 struct.csproj",
         "projectName": "Day 4 struct",
-        "projectPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\Day 4 struct\\Day 4 struct.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "E:\\Questionnaire - Bootcamp Formulatrix_files\\Project-Bootcamp-1\\Day 4 struct\\obj\\",
+        "projectPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\Day 4 struct\\Day 4 struct.csproj",
+        "packagesPath": "C:\\Users\\Batch 12\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Batch 12\\Documents\\Project-Bootcamp\\Day 4 struct\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Batch 12\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
